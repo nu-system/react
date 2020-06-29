@@ -1,0 +1,10 @@
+test
+jest.config.js
+!.eslintrc.js
+!.prettierrc.js
+.map
+dist
+es
+lib
+src/serviceWorker.js
+src/setupTests.js

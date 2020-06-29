@@ -1,0 +1,50 @@
+{
+  "name": "@_nu/react",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "father build",
+    "cz": "git add . && git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.{js,jsx,mjs,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add ."
+    ],
+    "packages/**/*.{css,scss,less,json,html,md,markdown}": [
+      "prettier --write",
+      "git add ."
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "commitizen": "^4.1.2",
+    "cz-lerna-changelog": "^2.0.3",
+    "father": "^2.29.3",
+    "husky": "^4.2.5",
+    "jest": "24.9.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.2.11",
+    "nwb": "^0.25.2",
+    "prettier": "^2.0.5",
+    "standard": "^14.3.4"
+  }
+}

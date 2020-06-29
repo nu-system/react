@@ -1,0 +1,18 @@
+{
+  "packages": ["packages/*"],
+  "private": true,
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    },
+    "publish": {
+      "ignoreChanges": ["*.md", "**/test/**", "**/demo/**", "**/dist/**"],
+      "conventionalCommits": true,
+      "registry": "private-nexus-registry-link",
+      "message": "chore(release): publish"
+    }
+  },
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "version": "independent"
+}

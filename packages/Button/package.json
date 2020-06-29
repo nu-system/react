@@ -1,0 +1,52 @@
+{
+  "name": "@_nu/react-button",
+  "version": "1.2.0",
+  "description": "No UI dependency Button of react",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "author": "ziven27",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react-button.git",
+  "bugs": "https://github.com/nu-system/react-button/issues",
+  "homepage": "https://nu-system.github.io/react/button/",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd",
+    "CHANGELOG.md",
+    "README.md",
+    "lang/README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "keywords": [
+    "react-component",
+    "ui",
+    "no-ui",
+    "nu-system",
+    "react",
+    "react-ui",
+    "button"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@_nu/css-button": "^0.0.8"
+  },
+  "gitHead": "66c3b32d52a1b2b315cc05b5ad8967b138da932f"
+}
