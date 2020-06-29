@@ -5,6 +5,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 1.1.0 (2020-06-29)
 
+
+### Features
+
+* add new packages ([5fc36a8](https://github.com/nu-system/react-dialog/commit/5fc36a83bfba9be335434f98abd211549864d5cd))
+
+
+
+
+
+# 1.1.0 (2020-06-29)
+
 ### Bug Fixes
 
 - remove pacakge ([487aee7](https://github.com/nu-system/react-dialog/commit/487aee74684b02bdedf54c3d20610488e19188ae))

@@ -1,6 +1,6 @@
 {
   "name": "@_nu/react-grid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "react grid component, react grid component builder",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
