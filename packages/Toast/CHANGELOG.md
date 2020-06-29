@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/nu-system/react-toast/compare/@_nu/react-toast@0.1.0...@_nu/react-toast@0.1.1) (2020-06-29)
+
+**Note:** Version bump only for package @_nu/react-toast
+
+
+
+
+
 # 0.1.0 (2020-06-29)
 
 
