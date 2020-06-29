@@ -1,0 +1,16 @@
+._top .nu_dialog {
+  transform: translate(0, -50px);
+}
+
+._bottom .nu_dialog {
+  transform: translate(0, 50px);
+}
+
+._right .nu_dialog {
+  transform: translate(50px, 0);
+}
+
+._left .nu_dialog {
+  transform: translate(-50px, 0);
+}
+

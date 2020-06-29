@@ -1,0 +1,45 @@
+{
+  "name": "@_nu/react-toast",
+  "version": "0.0.2",
+  "description": "NU 「 no-ui 」 组件库系统 nu-system，toast 组件 React 实现",
+  "author": "ziven27",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react-toast.git",
+  "bugs": "https://github.com/nu-system/react-toast/issues",
+  "homepage": "https://nu-system.github.io/react/toast/",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "react-transition-group": "^4.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo"
+  },
+  "keywords": [
+    "react-component",
+    "ui",
+    "no-ui",
+    "nu-system",
+    "react",
+    "react-ui",
+    "toast",
+    "messgate"
+  ]
+}

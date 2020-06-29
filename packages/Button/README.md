@@ -14,7 +14,7 @@ No UI dependency button of react.
 
 <iframe src="https://codesandbox.io/embed/throbbing-leftpad-juijc?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2FButton.js" title="throbbing-leftpad-juijc" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-English | [简体中文](./lang/README.md)
+English | [简体中文](./lang/zh.md)
 
 ## Features
 

@@ -1,0 +1,79 @@
+{
+  "name": "@_nu/react-select",
+  "version": "0.0.1",
+  "description": "react select",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "author": "ziven27",
+  "license": "MIT",
+  "homepage": "https://github.com/nu-system/react-select",
+  "bugs": {
+    "url": "https://github.com/nu-system/react-select/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nu-system/react-select.git"
+  },
+  "files": [
+    "demo",
+    "es",
+    "lib",
+    "umd",
+    "lang"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "jest",
+    "cz": "git add . && git cz",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --server",
+    "pub": "npm publish --access public",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "commitizenInit": "commitizen init cz-conventional-changelog --yarn --dev --exact",
+    "prettier": "prettier --write '*.{js,jsx,tsx,ts,less,css,md,json}'",
+    "lint": "eslint '*.{js,jsx,mjs,ts,tsx}' --fix"
+  },
+  "dependencies": {
+    "@_nu/css-select": "^0.0.2",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx}": [
+      "node_modules/.bin/prettier --write",
+      "node_modules/.bin/eslint --fix",
+      "git add ."
+    ],
+    "*.{css,scss,less,json,html,md,markdown}": [
+      "node_modules/.bin/prettier --write",
+      "git add ."
+    ]
+  },
+  "keywords": [
+    "react-component",
+    "ui",
+    "no-ui",
+    "nu-system",
+    "react",
+    "react-ui",
+    "select"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

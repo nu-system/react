@@ -1,0 +1,44 @@
+{
+  "name": "@_nu/react-avatar",
+  "version": "0.1.0",
+  "description": "react avatar",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "author": "ziven27",
+  "license": "MIT",
+  "homepage": "https://github.com/nu-system/react-avatar",
+  "bugs": {
+    "url": "https://github.com/nu-system/react-avatar/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nu-system/react-avatar.git"
+  },
+  "files": [
+    "es",
+    "lib",
+    "umd",
+    "lang",
+    "src"
+  ],
+  "dependencies": {
+    "@_nu/css-acss": "^0.2.1",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "keywords": [
+    "react-component",
+    "ui",
+    "no-ui",
+    "nu-system",
+    "react",
+    "react-ui",
+    "avatar"
+  ]
+}
