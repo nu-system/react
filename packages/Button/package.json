@@ -1,6 +1,6 @@
 {
   "name": "@_nu/react-button",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "No UI dependency Button of react",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -47,5 +47,6 @@
   },
   "devDependencies": {
     "@_nu/css-button": "^0.0.8"
-  }
+  },
+  "gitHead": "17e1330d1d980ec2f629ce14bb2f7d8d6bcf7e26"
 }

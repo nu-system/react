@@ -8,7 +8,6 @@
     "publish": {
       "ignoreChanges": ["*.md", "**/test/**", "**/demo/**", "**/dist/**"],
       "conventionalCommits": true,
-      "registry": "private-nexus-registry-link",
       "message": "chore(release): publish"
     }
   },
