@@ -57,5 +57,9 @@
     "react-ui",
     "dialog",
     "modal"
-  ]
+  ],
+  "gitHead": "cfb1455a595217bffaab1cb14da9be32604c7eb8",
+  "devDependencies": {
+    "focus-trap-react": "^6.0.0"
+  }
 }

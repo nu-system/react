@@ -1,18 +1,7 @@
+var _this = this,
+    _jsxFileName = "/Users/ziven27/Pro/@_nu/react/packages/Dialog/src/index.js";
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -49,22 +38,27 @@ var Dialog = React.forwardRef(function (_ref, ref) {
       _ref$closeTitle = _ref.closeTitle,
       closeTitle = _ref$closeTitle === void 0 ? 'Close' : _ref$closeTitle,
       _ref$closeChildren = _ref.closeChildren,
-      closeChildren = _ref$closeChildren === void 0 ? /*#__PURE__*/React.createElement(Fragment, null, "\xD7") : _ref$closeChildren,
+      closeChildren = _ref$closeChildren === void 0 ? /*#__PURE__*/React.createElement(Fragment, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 23
+    }
+  }, "\xD7") : _ref$closeChildren,
       _ref$onClose = _ref.onClose,
       onClose = _ref$onClose === void 0 ? function () {} : _ref$onClose,
       _ref$onClickMask = _ref.onClickMask,
       onClickMask = _ref$onClickMask === void 0 ? function () {} : _ref$onClickMask,
-      otherProps = _objectWithoutProperties(_ref, ["className", "children", "open", "active", "lockScroll", "maskTitle", "removeTime", "disabledPortal", "disableEsc", "closeTitle", "closeChildren", "onClose", "onClickMask"]);
+      otherProps = _objectWithoutPropertiesLoose(_ref, ["className", "children", "open", "active", "lockScroll", "maskTitle", "removeTime", "disabledPortal", "disableEsc", "closeTitle", "closeChildren", "onClose", "onClickMask"]);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      exit = _useState2[0],
-      setExit = _useState2[1];
+      exit = _useState[0],
+      setExit = _useState[1];
 
-  var _useState3 = useState(true),
-      _useState4 = _slicedToArray(_useState3, 2),
-      hide = _useState4[0],
-      setHide = _useState4[1];
+  var _useState2 = useState(true),
+      hide = _useState2[0],
+      setHide = _useState2[1];
 
   useEffect(function () {
     var removeTimer;
@@ -113,40 +107,77 @@ var Dialog = React.forwardRef(function (_ref, ref) {
 
   return /*#__PURE__*/React.createElement(Portal, {
     disabled: disabledPortal,
-    container: nodeDialogRoot
+    container: nodeDialogRoot,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 7
+    }
   }, /*#__PURE__*/React.createElement(FocusTrap, {
     active: open && !hide && active,
     focusTrapOptions: {
       onDeactivate: onClose,
       escapeDeactivates: !disableEsc,
       returnFocusOnDeactivate: true
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 9
     }
   }, /*#__PURE__*/React.createElement("dialog", _extends({
     ref: ref,
     open: !hide,
     role: "dialog",
     tabIndex: -1,
-    className: "nu_dialog_wrap ".concat(className)
-  }, otherProps), !!maskTitle && /*#__PURE__*/React.createElement("button", {
+    className: "nu_dialog_wrap " + className
+  }, otherProps, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 11
+    }
+  }), !!maskTitle && /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "nu_dialog_mask",
     title: maskTitle,
     onClick: function onClick(e) {
       return onClickMask(e) !== false && onClose();
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100,
+      columnNumber: 15
     }
   }), /*#__PURE__*/React.createElement("section", {
     role: "document",
-    className: "nu_dialog"
+    className: "nu_dialog",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107,
+      columnNumber: 13
+    }
   }, !!closeTitle && /*#__PURE__*/React.createElement("button", {
     "aria-label": closeTitle,
     type: "button",
     className: "nu_dialog_close",
     title: closeTitle,
     onClick: onClose,
-    tabIndex: 0
+    tabIndex: 0,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109,
+      columnNumber: 17
+    }
   }, closeChildren), children))));
 });
-Dialog.propTypes = {
+Dialog.propTypes = process.env.NODE_ENV !== "production" ? {
   /**
    * css class
    */
@@ -219,5 +250,5 @@ Dialog.propTypes = {
    * Close children
    */
   closeChildren: PropTypes.node
-};
+} : {};
 export default Dialog;
