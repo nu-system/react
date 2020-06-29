@@ -1,7 +1,9 @@
 "use strict";
 
-exports.__esModule = true;
-exports["default"] = void 0;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
 var _react = require("react");
 
@@ -21,7 +23,7 @@ var lock = function lock() {
     borderRight: borderRight
   };
   scrollEle.style.overflow = 'hidden';
-  scrollEle.style.borderRight = scrollWidth + " solid transparent";
+  scrollEle.style.borderRight = "".concat(scrollWidth, " solid transparent");
 }; // 解锁滚动条
 
 
@@ -42,5 +44,4 @@ var useLockScroll = function useLockScroll(enabled) {
 };
 
 var _default = useLockScroll;
-exports["default"] = _default;
-module.exports = exports.default;
+exports.default = _default;

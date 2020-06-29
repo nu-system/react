@@ -25,20 +25,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "start": "nwb serve-react-demo",
-    "test": "jest",
-    "cz": "git add . && git cz",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --server",
-    "pub": "npm publish --access public",
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "commitizenInit": "commitizen init cz-conventional-changelog --yarn --dev --exact",
-    "prettier": "prettier --write '*.{js,jsx,tsx,ts,less,css,md,json}'",
-    "lint": "eslint '*.{js,jsx,mjs,ts,tsx}' --fix"
-  },
   "dependencies": {
     "@_nu/css-select": "^0.0.2",
     "prop-types": "^15.7.2"
@@ -76,5 +62,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "gitHead": "cfb1455a595217bffaab1cb14da9be32604c7eb8"
+  "gitHead": "78628663cb39eee192a811c64426c81e01f5f1ce"
 }

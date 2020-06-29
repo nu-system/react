@@ -14,17 +14,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "build": "nwb build-react-component --copy-files",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "prepublishOnly": "npm run build",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "commitizenInit": "commitizen init cz-conventional-changelog --yarn --dev --exact"
-  },
   "dependencies": {
     "prop-types": "^15.7.2"
   },
@@ -45,5 +34,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "gitHead": "cfb1455a595217bffaab1cb14da9be32604c7eb8"
+  "gitHead": "78628663cb39eee192a811c64426c81e01f5f1ce"
 }

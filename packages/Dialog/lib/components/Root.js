@@ -1,7 +1,9 @@
 "use strict";
 
-exports.__esModule = true;
-exports["default"] = Root;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Root;
 
 /**
  * All the dialog element will append in this node
@@ -20,4 +22,3 @@ function Root() {
 }
 
 ;
-module.exports = exports.default;

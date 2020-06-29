@@ -15,7 +15,7 @@ var lock = function lock() {
     borderRight: borderRight
   };
   scrollEle.style.overflow = 'hidden';
-  scrollEle.style.borderRight = scrollWidth + " solid transparent";
+  scrollEle.style.borderRight = "".concat(scrollWidth, " solid transparent");
 }; // 解锁滚动条
 
 
