@@ -54,19 +54,19 @@ export default _default;
 ```JSX
 <Button className="nu_btn _fill _primay">Button</Button>
 <Button className="nu_btn _fill _primay" href="/nu-button">Link Button</Button>
-<Button as="strong" className="nu_btn _fill _primay">Button</Button>
+<Button component="strong" className="nu_btn _fill _primay">Button</Button>
 ```
 
 ## Api
 
-| 属性 |               类型               |  默认值  |     功能     |
-| :--- | :------------------------------: | :------: | :----------: |
-| href |              string              | '&nbsp;' | href for `a` |
-| as   | string &#124; func &#124; object | 'button' |   tagName    |
+| 属性      |               类型               |  默认值  |     功能     |
+| :-------- | :------------------------------: | :------: | :----------: |
+| href      |              string              | '&nbsp;' | href for `a` |
+| component | string &#124; func &#124; object | 'button' |   tagName    |
 
 ```JSX
 <Button className="nu_btn _fill">hello</Button>
-<Button className="nu_btn _fill" as="strong">hello</Button>
+<Button className="nu_btn _fill" component="strong">hello</Button>
 <Button className="nu_btn _fill"><strong>hello</strong></Button>
 <Button className="nu_btn _fill" disabled>hello</Button>
 <Button className="nu_btn _fill _primary">hello</Button>

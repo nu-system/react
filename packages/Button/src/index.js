@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 /**
  * Button
- * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly as?: *}> & React.RefAttributes<unknown>>}
+ * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
  */
-const Button = React.forwardRef(({ as, ...otherProps }, ref) => {
+const Index = React.forwardRef(({ component, ...otherProps }, ref) => {
   const { href, role, type, children, title } = otherProps;
 
   // if exist Component use component
   // or ComponentTag rely on href
-  const ComponentTag = as ? as : href ? 'a' : 'button';
+  const ComponentTag = component ? component : href ? 'a' : 'button';
 
   // only button got button type
   if (ComponentTag === 'button' && !type) {
@@ -30,15 +30,11 @@ const Button = React.forwardRef(({ as, ...otherProps }, ref) => {
   return <ComponentTag ref={ref} {...otherProps} />;
 });
 
-Button.propTypes = {
-  /**
-   * href for tag a
-   */
+Index.propTypes = {
+  /** href for tag a */
   href: PropTypes.string,
-  /**
-   * shell of button
-   */
-  as: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType]),
+  /** shell of button */
+  component: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType]),
 };
 
-export default Button;
+export default Index;

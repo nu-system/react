@@ -8,12 +8,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 /**
  * Button
- * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly as?: *}> & React.RefAttributes<unknown>>}
+ * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
  */
 
-var Button = React.forwardRef(function (_ref, ref) {
-  var as = _ref.as,
-      otherProps = _objectWithoutProperties(_ref, ["as"]);
+var Index = React.forwardRef(function (_ref, ref) {
+  var component = _ref.component,
+      otherProps = _objectWithoutProperties(_ref, ["component"]);
 
   var href = otherProps.href,
       role = otherProps.role,
@@ -22,7 +22,7 @@ var Button = React.forwardRef(function (_ref, ref) {
       title = otherProps.title; // if exist Component use component
   // or ComponentTag rely on href
 
-  var ComponentTag = as ? as : href ? 'a' : 'button'; // only button got button type
+  var ComponentTag = component ? component : href ? 'a' : 'button'; // only button got button type
 
   if (ComponentTag === 'button' && !type) {
     otherProps.type = 'button';
@@ -42,15 +42,11 @@ var Button = React.forwardRef(function (_ref, ref) {
     ref: ref
   }, otherProps));
 });
-Button.propTypes = {
-  /**
-   * href for tag a
-   */
+Index.propTypes = {
+  /** href for tag a */
   href: PropTypes.string,
 
-  /**
-   * shell of button
-   */
-  as: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType])
+  /** shell of button */
+  component: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType])
 };
-export default Button;
+export default Index;
