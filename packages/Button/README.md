@@ -39,22 +39,23 @@ yarn add @_nu/react-button @_nu/css-button
 import "@_nu/css-button";                         // core style
 import "@_nu/css-button/css/skins/bootstrap.css"; // skin of bootstrap
 import './style.css';                             // custome style
-export default from "@_nu/react-button";
-```
+import NuButton from "@_nu/react-button";         // import
 
-```JSX
-/* @components/Button/index.d.ts */
-import { ComponentProps } from "@_nu/react-button";
-declare const _default: (props?: ComponentProps) => JSX.Element;
-export default _default;
+// Add default class
+NuButton.defaultProps.onBeforeReturn = ({className='', props})=> ({
+  className:`nu_btn ${className}`
+  ...props
+});
+
+export default NuButton;
 ```
 
 ### Use
 
 ```JSX
-<Button className="nu_btn _fill _primay">Button</Button>
-<Button className="nu_btn _fill _primay" href="/nu-button">Link Button</Button>
-<Button component="strong" className="nu_btn _fill _primay">Button</Button>
+<Button className="_fill _primay">Button</Button>
+<Button className="_fill _primay" href="/nu-button">Link Button</Button>
+<Button component="strong" className="_fill _primay">Button</Button>
 ```
 
 ## Api
@@ -65,12 +66,12 @@ export default _default;
 | component | string &#124; func &#124; object | 'button' |   tagName    |
 
 ```JSX
-<Button className="nu_btn _fill">hello</Button>
-<Button className="nu_btn _fill" component="strong">hello</Button>
-<Button className="nu_btn _fill"><strong>hello</strong></Button>
-<Button className="nu_btn _fill" disabled>hello</Button>
-<Button className="nu_btn _fill _primary">hello</Button>
-<Button className="nu_btn _fill _primary" href="." title="hello">hello</Button>
+<Button className="_fill">hello</Button>
+<Button className="_fill" component="strong">hello</Button>
+<Button className="_fill"><strong>hello</strong></Button>
+<Button className="_fill" disabled>hello</Button>
+<Button className="_fill _primary">hello</Button>
+<Button className="_fill _primary" href="." title="hello">hello</Button>
 ```
 
 =>
@@ -80,10 +81,13 @@ export default _default;
 <strong class="nu_btn _fill" role="button" title="hello">hello</strong>
 <button class="nu_btn _fill" type="button"><strong>hello</strong></button>
 <button class="nu_btn _fill" type="button" disabled title="hello">hello</button>
-<button class="nu_btn _primary _fill" type="button" title="hello">hello</button>
 <button class="nu_btn _fill _primary" type="button" title="hello">hello</button>
 <a class="nu_btn _fill _primary" role="button" href="." title="hello">hello</a>
 ```
+
+| defaultProps   |   type   |      Default      |           Function            |
+| :------------- | :------: | :---------------: | :---------------------------: |
+| onBeforeReturn | function | `(props)=> props` | custom props on before return |
 
 ## Custom style？
 

@@ -13,7 +13,8 @@
 
 ```bash
 $ lerna list  // 查看组件列表
-$ yarn workspace <ComponentName> nwb serve-react-demo  // 跑 demo
+$ yarn workspace @_nu/react-button nwb serve-react-demo  // 跑 demo
 $ yarn build // 构建
 $ yarn cz  // 代码提交
+$ yarn workspace @_nu/react-button jest // 跑测试
 ```

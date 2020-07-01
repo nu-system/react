@@ -21,9 +21,10 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
  * Button
  * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
  */
-var Index = _react.default.forwardRef(function (_ref, ref) {
+var NuButton = _react.default.forwardRef(function NuButton(_ref, ref) {
   var component = _ref.component,
-      otherProps = _objectWithoutProperties(_ref, ["component"]);
+      onBeforeReturn = _ref.onBeforeReturn,
+      otherProps = _objectWithoutProperties(_ref, ["component", "onBeforeReturn"]);
 
   var href = otherProps.href,
       role = otherProps.role,
@@ -32,33 +33,44 @@ var Index = _react.default.forwardRef(function (_ref, ref) {
       title = otherProps.title; // if exist Component use component
   // or ComponentTag rely on href
 
-  var ComponentTag = component ? component : href ? 'a' : 'button'; // only button got button type
+  var ComponentTag = component ? component : href ? "a" : "button"; // only button got button type
 
-  if (ComponentTag === 'button' && !type) {
-    otherProps.type = 'button';
+  if (ComponentTag === "button" && !type) {
+    otherProps.type = "button";
   } // Got role attr when ComponentTag is not button
 
 
-  if (ComponentTag !== 'button' && !role) {
-    otherProps.role = 'button';
+  if (ComponentTag !== "button" && !role) {
+    otherProps.role = "button";
   } // set the title of button
 
 
-  if (typeof children === 'string' && !title) {
+  if (typeof children === "string" && !title) {
     otherProps.title = children;
-  }
+  } // on before component return
 
+
+  var renderProps = onBeforeReturn(otherProps);
   return /*#__PURE__*/_react.default.createElement(ComponentTag, _extends({
     ref: ref
-  }, otherProps));
+  }, renderProps));
 });
 
-Index.propTypes = {
+NuButton.defaultProps = {
+  /** on before component return */
+  onBeforeReturn: function onBeforeReturn(props) {
+    return props;
+  }
+};
+NuButton.propTypes = {
+  /** on before component return */
+  onBeforeReturn: _propTypes.default.func,
+
   /** href for tag a */
   href: _propTypes.default.string,
 
   /** shell of button */
   component: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.elementType])
 };
-var _default = Index;
+var _default = NuButton;
 exports.default = _default;

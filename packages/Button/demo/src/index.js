@@ -16,42 +16,42 @@ function Demo() {
       <p>
         点我切换主题：
         <select onChange={onThemeChange}>
-          <option value="nu_btn btn_bootstrap">bootstrap</option>
-          <option value="nu_btn btn_webnovel _capsule">webnovel</option>
+          <option value="btn_bootstrap">bootstrap</option>
+          <option value="btn_webnovel _capsule">webnovel</option>
         </select>
       </p>
       <p>
-        原生按钮： <Button>Button</Button>
+        原生按钮： <button type="button">Button</button>
       </p>
       <p>
-        <Button className={`${buttonThemeClass} _fill _primary`}>
+        <Button className={`${buttonThemeClass} _primary`}>
           Primary
         </Button>
-        <Button className={`${buttonThemeClass} _fill _secondary`}>
+        <Button className={`${buttonThemeClass} _secondary`}>
           Secondary
         </Button>
-        <Button className={`${buttonThemeClass} _fill _warning`}>
+        <Button className={`${buttonThemeClass} _warning`}>
           Warning
         </Button>
-        <Button className={`${buttonThemeClass} _fill _success`}>
+        <Button className={`${buttonThemeClass} _success`}>
           Success
         </Button>
-        <Button className={`${buttonThemeClass} _fill _danger`}>Danger</Button>
+        <Button className={`${buttonThemeClass} _danger`}>Danger</Button>
       </p>
       <p>
-        <Button disabled className={`${buttonThemeClass} _fill _primary`}>
+        <Button disabled className={`${buttonThemeClass} _primary`}>
           Primary
         </Button>
-        <Button disabled className={`${buttonThemeClass} _fill _secondary`}>
+        <Button disabled className={`${buttonThemeClass} _secondary`}>
           Secondary
         </Button>
-        <Button disabled className={`${buttonThemeClass} _fill _warning`}>
+        <Button disabled className={`${buttonThemeClass} _warning`}>
           Warning
         </Button>
-        <Button disabled className={`${buttonThemeClass} _fill _success`}>
+        <Button disabled className={`${buttonThemeClass} _success`}>
           Success
         </Button>
-        <Button disabled className={`${buttonThemeClass} _fill _danger`}>
+        <Button disabled className={`${buttonThemeClass} _danger`}>
           Danger
         </Button>
       </p>
@@ -106,20 +106,20 @@ function Demo() {
         <Button className={`${buttonThemeClass} _link _danger`}>Danger</Button>
       </p>
       <p>
-        <Button disabled>disabled</Button>
-        <Button disabled className={`${buttonThemeClass} _primary`}>
+        <Button disabled className={`${buttonThemeClass} _link`}>disabled</Button>
+        <Button disabled className={`${buttonThemeClass} _link _primary`}>
           Primary
         </Button>
-        <Button disabled className={`${buttonThemeClass} _secondary`}>
+        <Button disabled className={`${buttonThemeClass} _link _secondary`}>
           Secondary
         </Button>
-        <Button disabled className={`${buttonThemeClass} _warning`}>
+        <Button disabled className={`${buttonThemeClass} _link _warning`}>
           Warning
         </Button>
-        <Button disabled className={`${buttonThemeClass} _success`}>
+        <Button disabled className={`${buttonThemeClass} _link _success`}>
           Success
         </Button>
-        <Button disabled className={`${buttonThemeClass} _danger`}>
+        <Button disabled className={`${buttonThemeClass} _link _danger`}>
           Danger
         </Button>
       </p>
