@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/nu-system/react-button/compare/@_nu/react-button@1.2.0...@_nu/react-button@1.3.0) (2020-07-01)
+
+
+### Features
+
+* update button api ([9f27c40](https://github.com/nu-system/react-button/commit/9f27c403791ab2c9b49b3398e4b1b74a1f708b5e))
+
+
+
+
+
 # [1.2.0](https://github.com/nu-system/react-button/compare/@_nu/react-button@1.1.2...@_nu/react-button@1.2.0) (2020-06-30)
 
 
