@@ -6,3 +6,8 @@ export interface ComponentProps
 }
 declare const _default: (props?: ComponentProps) => JSX.Element;
 export default _default;
+
+
+interface text<T> {
+  props?:T
+}
