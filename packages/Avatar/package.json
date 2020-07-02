@@ -7,16 +7,16 @@
   "module": "es/index.js",
   "author": "ziven27",
   "license": "MIT",
-  "homepage": "https://github.com/nu-system/react-avatar",
+  "homepage": "https://github.com/nu-system/react",
   "bugs": {
-    "url": "https://github.com/nu-system/react-avatar/issues"
+    "url": "https://github.com/nu-system/react"
   },
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nu-system/react-avatar.git"
+    "url": "git@github.com:nu-system/react.git"
   },
   "files": [
     "es",
@@ -27,10 +27,19 @@
   ],
   "dependencies": {
     "@_nu/css-acss": "^0.2.1",
+    "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "16.x"
+  },
+  "devDependencies": {
+    "father": "^2.29.5",
+    "nwb": "^0.25.2"
+  },
+  "scripts": {
+    "demo": "nwb serve-react-demo",
+    "build": "father build"
   },
   "keywords": [
     "react-component",

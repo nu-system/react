@@ -1,100 +1,122 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const Avatar = React.forwardRef(
-  (
-    {
-      //
-      size = 40,
-      errorBg,
-      className,
-      src,
-      alt,
-      children,
-      ...otherProps
-    },
-    ref,
-  ) => {
-    const [imgLoadError, setImgLoadError] = useState(false);
-    let strClass = 'pr br100p';
+/**
+ * 错误图片对象
+ * @param errorBg
+ * @param imgProps
+ * @returns {null|*}
+ * @constructor
+ */
+const ErrorImg = ({ placeholder, ...imgProps }) => {
+  if (!placeholder) {
+    return null;
+  }
 
-    if (className) {
-      strClass += ` ${className}`;
-    }
+  /* placeholder 是字符串则加载新的图片 */
+  if (typeof placeholder === 'string') {
+    return <img {...imgProps} alt="error" aria-hidden />;
+  }
 
-    // 当元素没有指定大小的时候
-    // 容器撑满元素
-    strClass += size ? ' dib vam' : ' db';
+  /* placeholder 是个 function 直接执行  */
+  if (typeof placeholder === 'function') {
+    return placeholder({
+      className: imgProps.className,
+    });
+  }
 
-    // 图片加载失败
-    const onError = () => setImgLoadError(true);
+  return placeholder;
+};
 
-    const imgProps = {
-      className: 'pa t0 l0 w100p h100p br100p',
-      width: size || 40,
-      height: size || 40,
-    };
-
-    /**
-     * 错误图片对象
-     * @returns {null|*}
-     * @constructor
-     */
-    const ErrorImg = () => {
-      if (!errorBg) {
-        return null;
-      }
-      if (typeof errorBg === 'string') {
-        // eslint-disable-next-line jsx-a11y/alt-text
-        return <img {...imgProps} alt="error" aria-hidden />;
-      }
-
-      if (typeof errorBg === 'function') {
-        return errorBg({
-          className: imgProps.className,
-        });
-      }
-      return null;
-    };
-
-    return (
-      <nu-avatar data-size={size || null} class={strClass} {...otherProps}>
-        <nu-avatar-ph class="db pt100p br100p" />
-        {!src || imgLoadError ? (
-          <ErrorImg />
-        ) : (
-          // eslint-disable-next-line jsx-a11y/alt-text
-          <img ref={ref} alt={alt} src={src} {...imgProps} onError={onError} />
-        )}
-        {children}
-      </nu-avatar>
-    );
+const NuAvatar = React.forwardRef(function NuAvatar(
+  {
+    className,
+    children,
+    size,
+    imgDefaultSize,
+    placeholder,
+    src,
+    alt,
+    onError,
+    ...otherProps
   },
-);
+  ref,
+) {
+  const [imgLoadError, setImgLoadError] = useState(false);
+  // 当元素没有指定大小的时候
+  // 容器撑满元素
+  const strClass = classNames(
+    'pr br100p',
+    size ? 'dib vam' : 'db', // 当元素没有指定大小的时候， 容器撑满元素
+    {
+      [`_${size}`]: !!size,
+    },
+    className,
+  );
 
-Avatar.propTypes = {
-  // eslint-disable-next-line no-undef
-  className: PropTypes.string,
-  // eslint-disable-next-line no-undef
-  children: PropTypes.node,
-  // eslint-disable-next-line no-undef
+  /**
+   * 图片加载失败
+   */
+  const onImgLoadError = () => {
+    setImgLoadError(true);
+    typeof onError === 'function' && onError();
+  };
+
+  /**
+   * ImgProps
+   * @type {{width: *, className: string, height: *}}
+   */
+  const imgProps = {
+    className: 'pa t0 l0 w100p h100p br100p',
+    width: size || imgDefaultSize,
+    height: size || imgDefaultSize,
+  };
+
+  return (
+    <nu-avatar class={strClass}>
+      <nu-avatar-ph aria-hidden class="db pt100p br100p" />
+      {!src || imgLoadError ? (
+        <ErrorImg placeholder={placeholder} {...imgProps} />
+      ) : (
+        <img
+          ref={ref}
+          alt={alt}
+          src={src}
+          {...imgProps}
+          {...otherProps}
+          onError={onImgLoadError}
+        />
+      )}
+      {children}
+    </nu-avatar>
+  );
+});
+
+NuAvatar.defaultProps = {
+  size: 40,
+  imgDefaultSize: 40,
+};
+
+NuAvatar.propTypes = {
+  /** Img src */
   src: PropTypes.string,
-  // eslint-disable-next-line no-undef
-  alt: PropTypes.string.isRequired,
+  /** Img alt */
+  alt: PropTypes.string,
   /** 当没有 size 的时候会变成自适应 */
-  // eslint-disable-next-line no-undef
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** 当没有指定 size 的时候，img 的 width 和 height 会等于 imgDefaultSize */
+  imgDefaultSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
    * 图片加载失败的占位符号
    * 如果是 string 则会新添加一个img
    * 如果是 object 或者 function 会直接输出
    * */
-  // eslint-disable-next-line no-undef
-  errorBg: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  /**
+   * 图片加载失败执行
+   */
+  onError: PropTypes.func,
 };
 
-Avatar.defaultProps = {
-  size: 40,
-};
-
-export default Avatar;
+export default NuAvatar;

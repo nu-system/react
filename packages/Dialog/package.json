@@ -27,6 +27,10 @@
     "react": ">=16.0.0",
     "react-dom": ">=16.0.0"
   },
+  "devDependencies": {
+    "father": "^2.29.5",
+    "nwb": "^0.25.2"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
@@ -37,6 +41,10 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "scripts": {
+    "demo": "nwb serve-react-demo",
+    "build": "father build"
   },
   "keywords": [
     "react-component",

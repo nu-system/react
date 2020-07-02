@@ -1,15 +1,15 @@
 nu-avatar {
   background-color: #dddddd;
 }
-nu-avatar[data-size='24'] {
+nu-avatar._24 {
   width: 24px;
 }
-nu-avatar[data-size='32'] {
+nu-avatar._32 {
   width: 32px;
 }
-nu-avatar[data-size='40'] {
+nu-avatar._40 {
   width: 40px;
 }
-nu-avatar[data-size='48'] {
+nu-avatar._48 {
   width: 48px;
 }

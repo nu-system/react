@@ -30,6 +30,10 @@
   "peerDependencies": {
     "react": "16.x"
   },
+  "devDependencies": {
+    "father": "^2.29.5",
+    "nwb": "^0.25.2"
+  },
   "keywords": [
     "react-component",
     "ui",
@@ -46,6 +50,10 @@
   },
   "devDependencies": {
     "@_nu/css-button": "^0.0.8"
+  },
+  "scripts": {
+    "demo": "nwb serve-react-demo",
+    "build": "father build"
   },
   "gitHead": "17e1330d1d980ec2f629ce14bb2f7d8d6bcf7e26"
 }

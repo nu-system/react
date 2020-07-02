@@ -32,6 +32,10 @@
   "peerDependencies": {
     "react": "16.x"
   },
+  "devDependencies": {
+    "father": "^2.29.5",
+    "nwb": "^0.25.2"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -61,6 +65,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "scripts": {
+    "demo": "nwb serve-react-demo",
+    "build": "father build"
   },
   "gitHead": "6a4ea98e33a28bc87263e316d1d00f92d5744452"
 }

@@ -23,8 +23,8 @@ function Demo() {
       <Avatar src={imgAvatar} alt="hello" size={24} />
       <Avatar src={imgAvatar} alt="hello" size={40} />
       <Avatar src={imgAvatar} alt="hello" size={32} />
-      <Avatar errorBg={AvatarDefault} src="123" alt="hello" />
-      <Avatar errorBg={AvatarDefault} alt="hello" />
+      <Avatar placeholder={AvatarDefault} src="123" alt="hello" />
+      <Avatar placeholder={AvatarDefault} alt="hello" />
     </div>
   );
 }

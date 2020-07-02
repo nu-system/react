@@ -5,8 +5,20 @@
     "access": "public"
   },
   "scripts": {
+    "cz": "git add . && git-cz",
     "build": "father build",
-    "cz": "git add . && git-cz"
+    "build:button": "PACKAGE=@_nu/react-button father build",
+    "build:avatar": "PACKAGE=@_nu/react-avatar father build",
+    "build:dialog": "PACKAGE=@_nu/react-dialog father build",
+    "build:img": "PACKAGE=@_nu/react-img father build",
+    "build:select": "PACKAGE=@_nu/react-select father build",
+    "build:toast": "PACKAGE=@_nu/react-toast father build",
+    "demo:button": "yarn workspace @_nu/react-button nwb serve-react-demo",
+    "demo:avatar": "yarn workspace @_nu/react-avatar nwb serve-react-demo",
+    "demo:dialog": "yarn workspace @_nu/react-dialog nwb serve-react-demo",
+    "demo:img": "yarn workspace @_nu/react-img nwb serve-react-demo",
+    "demo:select": "yarn workspace @_nu/react-select nwb serve-react-demo",
+    "demo:toast": "yarn workspace @_nu/react-toast nwb serve-react-demo"
   },
   "config": {
     "commitizen": {
@@ -40,11 +52,11 @@
     "classnames": "^2.2.6",
     "commitizen": "^4.1.2",
     "cz-lerna-changelog": "^2.0.3",
-    "father": "^2.29.3",
     "husky": "^4.2.5",
     "jest": "24.9.0",
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
+    "father": "^2.29.5",
     "nwb": "^0.25.2",
     "prettier": "^2.0.5",
     "standard": "^14.3.4"
