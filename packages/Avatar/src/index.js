@@ -86,7 +86,7 @@ const NuAvatar = React.forwardRef(function NuAvatar(
   });
   return (
     <Component className={componentClassName}>
-      {classNameDefault.ph ? <span className={classNameDefault.ph} /> : null}
+      {classNameDefault.ph ? <span aria-hidden="true" className={classNameDefault.ph} /> : null}
       {!otherProps.src || imgLoadError ? (
         <AvatarPlaceholder placeholder={placeholder} {...imgProps} />
       ) : (

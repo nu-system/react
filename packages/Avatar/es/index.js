@@ -123,6 +123,7 @@ var NuAvatar = React.forwardRef(function NuAvatar(_ref2, ref) {
   return /*#__PURE__*/React.createElement(Component, {
     className: componentClassName
   }, classNameDefault.ph ? /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
     className: classNameDefault.ph
   }) : null, !otherProps.src || imgLoadError ? /*#__PURE__*/React.createElement(AvatarPlaceholder, _extends({
     placeholder: placeholder
