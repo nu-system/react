@@ -153,10 +153,7 @@ var NuAvatar = _react.default.forwardRef(function NuAvatar(_ref2, ref) {
 NuAvatar.defaultProps = {};
 NuAvatar.propTypes = {
   /** 容器元素 */
-  Component: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.elementType]),
-
-  /** 容器元素 */
-  before: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.elementType]),
+  Component: _propTypes.default.node,
 
   /** 子元素 */
   children: _propTypes.default.node,
@@ -178,7 +175,7 @@ NuAvatar.propTypes = {
    * 如果是 string 则会新添加一个img
    * 如果是 object 或者 function 会直接输出
    * */
-  placeholder: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.func, _propTypes.default.elementType])
+  placeholder: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.node])
 };
 var _default = NuAvatar;
 exports.default = _default;
