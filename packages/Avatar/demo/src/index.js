@@ -1,9 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { render } from 'react-dom';
-import './index.css';
-import Avatar from '../components/component';
+import Avatar from '../components/Avatar';
 import imgAvatar from '../avatar.jpg';
+import './index.css';
 
 // eslint-disable-next-line react/prop-types
 const AvatarDefault = ({ className = null }) => (
@@ -21,7 +20,7 @@ function Demo() {
       <Avatar src={imgAvatar} alt="hello" size={24} />
       <Avatar src={imgAvatar} alt="hello" size={40} />
       <Avatar src={imgAvatar} alt="hello" size={32} />
-      <Avatar src="123" alt="hello" size="auto" placeholder={AvatarDefault}  />
+      <Avatar src="123" alt="hello" size="auto" placeholder={AvatarDefault} />
       <Avatar src={imgAvatar} size="auto" alt="hello" />
       <Avatar placeholder={AvatarDefault} size="auto" alt="hello" />
     </div>

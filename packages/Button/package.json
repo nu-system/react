@@ -11,15 +11,11 @@
   "bugs": "https://github.com/nu-system/react-button/issues",
   "homepage": "https://nu-system.github.io/react/button/",
   "files": [
-    "css",
     "es",
     "lib",
-    "umd",
-    "CHANGELOG.md",
-    "README.md",
-    "lang/README.md",
-    "LICENSE",
-    "package.json"
+    "src",
+    "lang",
+    "demo"
   ],
   "publishConfig": {
     "access": "public"

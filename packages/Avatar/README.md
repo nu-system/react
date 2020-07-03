@@ -12,72 +12,22 @@
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@_nu/react-avatar/badge
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/@_nu/react-avatar
 
-### HTML
+## 安装
 
-`<Avatar src="/avatar.717cf745.jpg" alt="hello" size={40} />`
-
-= >
-
-```html
-<nu-avatar data-size="40" class="pr br100p dib vam">
-  <nu-avatar-ph class="db pt100p br100p"></nu-avatar-ph>
-  <img
-    alt="hello"
-    src="/avatar.717cf745.jpg"
-    class="pa t0 l0 w100p h100p br100p"
-    width="40"
-    height="40"
-  />
-</nu-avatar>
+```bash
+$ npm install @_nu/react-avatar
 ```
 
-`<Avatar src="/avatar.717cf745.jpg" alt="hello" size={null} />`
-
-= >
-
-```html
-<nu-avatar class="pr br100p db">
-  <nu-avatar-ph class="db pt100p br100p"></nu-avatar-ph>
-  <img
-    alt="hello"
-    src="/avatar.717cf745.jpg"
-    class="pa t0 l0 w100p h100p br100p"
-    width="40"
-    height="40"
-  />
-</nu-avatar>
-```
-
-## 自定义样式
+## 二次封装
 
 ```JSX
-/* @components/Avatar/index.js */
-
+/* @/components/Avatar/index.js */
 import Avatar from "@_nu/react-avatar";
-import "@_nu/css-acss";
-// custome style
-// import './style.css';
+
+// 这里编写自定义的样式
+import './style.css';
 
 export default Avatar;
-```
-
-```css
-/* st*/
-nu-avatar {
-  background-color: #dddddd;
-}
-nu-avatar[data-size='24'] {
-  width: 24px;
-}
-nu-avatar[data-size='32'] {
-  width: 32px;
-}
-nu-avatar[data-size='40'] {
-  width: 40px;
-}
-nu-avatar[data-size='48'] {
-  width: 48px;
-}
 ```
 
 ## 使用
@@ -86,7 +36,6 @@ nu-avatar[data-size='48'] {
 import React from 'react';
 import Avatar from "./components/Avatar";
 import imgAvatar from '../avatar.jpg';
-
 
 const AvatarDefault = ({ className = null }) => (
   <svg
@@ -101,11 +50,12 @@ const AvatarDefault = ({ className = null }) => (
 const Page=()=>{
     return (
      <div>
-      <Avatar src={imgAvatar} alt="hello" size={null} />
       <Avatar src={imgAvatar} alt="hello" size={24} />
       <Avatar src={imgAvatar} alt="hello" size={40} />
       <Avatar src={imgAvatar} alt="hello" size={32} />
-      <Avatar errorBg={AvatarDefault} src="123" alt="hello" />
+      <Avatar src={imgAvatar} alt="hello" size="auto"  />
+      <Avatar placeholder={AvatarDefault} src="123" alt="hello" size="auto"   />
+      <Avatar placeholder={AvatarDefault} size="auto" alt="hello" />
      </div>
     );
 };
@@ -115,19 +65,19 @@ export default Page;
 
 ## 接口
 
-| 属性      |         类型         | 默认值 |     作用     |
-| :-------- | :------------------: | :----: | :----------: |
-| children  |         node         |   -    |    子元素    |
-| className |        string        |   -    |    class     |
-| src       |        string        |   -    |   图片地址   |
-| alt       |  string.isRequired   |   -    |   图片描述   |
-| size      | string &#124; number |  '40'  | Avatar 尺寸  |
-| errorBg   |         node         |   -    | 图片加载失败 |
+| 属性        |         类型         | 默认值 |     作用     |
+| :---------- | :------------------: | :----: | :----------: |
+| Component   |         node         |   i    |   容器组件   |
+| children    |         node         |   -    |    子元素    |
+| className   |        string        |   -    |    class     |
+| src         |        string        |   -    |   图片地址   |
+| alt         |  string.isRequired   |   -    |   图片描述   |
+| size        | string &#124; number |  '40'  | Avatar 尺寸  |
+| placeholder |  node &#124; string  |   -    | 图片加载失败 |
 
 - size：`size={null}` 表示头像会撑满整个容器
-- errorBg: `string` 表示图片加载失败用这个作为占位图，
+- placeholder: `string` 表示图片加载失败用这个作为占位图，
 
 ## 更多
 
 - [nu-system](https://nu-system.github.io/)
-- [@\_nu/css-acss](https://nu-system.github.io/css/acss/)

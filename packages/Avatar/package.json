@@ -21,9 +21,9 @@
   "files": [
     "es",
     "lib",
-    "umd",
+    "src",
     "lang",
-    "src"
+    "demo"
   ],
   "dependencies": {
     "@_nu/css-acss": "^0.2.1",

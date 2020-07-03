@@ -11,10 +11,11 @@
   "bugs": "https://github.com/nu-system/react-dialog/issues",
   "homepage": "https://nu-system.github.io/react/dialog/",
   "files": [
-    "css",
     "es",
     "lib",
-    "umd"
+    "src",
+    "lang",
+    "demo"
   ],
   "publishConfig": {
     "access": "public"

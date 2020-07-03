@@ -6,10 +6,11 @@
   "typings": "lib/index.d.ts",
   "module": "es/index.js",
   "files": [
-    "css",
     "es",
     "lib",
-    "umd"
+    "src",
+    "lang",
+    "demo"
   ],
   "publishConfig": {
     "access": "public"

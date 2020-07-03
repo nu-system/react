@@ -99,9 +99,7 @@ const NuAvatar = React.forwardRef(function NuAvatar(
 NuAvatar.defaultProps = {};
 NuAvatar.propTypes = {
   /** 容器元素 */
-  Component: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType]),
-  /** 容器元素 */
-  before: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType]),
+  Component: PropTypes.node,
   /** 子元素 */
   children: PropTypes.node,
   /** 当没有 size 的时候会变成自适应 */
@@ -117,11 +115,7 @@ NuAvatar.propTypes = {
    * 如果是 string 则会新添加一个img
    * 如果是 object 或者 function 会直接输出
    * */
-  placeholder: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.func,
-    PropTypes.elementType,
-  ]),
+  placeholder: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
 };
 
 export default NuAvatar;

@@ -13,7 +13,9 @@
   "files": [
     "es",
     "lib",
-    "src"
+    "src",
+    "lang",
+    "demo"
   ],
   "dependencies": {
     "react-transition-group": "^4.1.1"
