@@ -52,11 +52,12 @@
     "classnames": "^2.2.6",
     "commitizen": "^4.1.2",
     "cz-lerna-changelog": "^2.0.3",
+    "e2-cli": "^1.2.0",
+    "father": "^2.29.5",
     "husky": "^4.2.5",
     "jest": "24.9.0",
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
-    "father": "^2.29.5",
     "nwb": "^0.25.2",
     "prettier": "^2.0.5",
     "standard": "^14.3.4"

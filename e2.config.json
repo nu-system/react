@@ -1,0 +1,60 @@
+{
+  "_data": {
+    "version": "1.0.0"
+  },
+  "component": {
+    "_description": "添加组件",
+    "_data": {
+      "tplName": "component"
+    },
+    "_ask": [
+      {
+        "message": "请输入组件名称:",
+        "name": "componentName"
+      }
+    ],
+    "template": [
+      {
+        "from": "e2-tpl/components/Component",
+        "to": "src/components/<%= e2.ttc(e2.componentName) %>"
+      }
+    ]
+  },
+  "page": {
+    "_description": "添加页面",
+    "_data": {
+      "tplName": "page"
+    },
+    "_ask": [
+      {
+        "message": "请输入页面名称:",
+        "name": "pageName"
+      }
+    ],
+    "template": [
+      {
+        "from": "e2-tpl/pages/page",
+        "to": "src/pages/<%= e2.ttc(e2.pageName) %>"
+      }
+    ]
+  },
+  "ejs": {
+    "_description": "测试 disabledEjs ",
+    "_data": {
+      "tplName": "page"
+    },
+    "_ask": [
+      {
+        "message": "请输入页面名称:",
+        "name": "pageName"
+      }
+    ],
+    "template": [
+      {
+        "from": "e2-tpl/pages/ejs/index.html",
+        "to": "src/pages/<%= e2.ttl(e2.pageName) %>/index.html",
+        "disabledEjs": true
+      }
+    ]
+  }
+}

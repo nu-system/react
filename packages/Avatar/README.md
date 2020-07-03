@@ -12,15 +12,6 @@
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@_nu/react-avatar/badge
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/@_nu/react-avatar
 
-## 安装
-
-```
-yarn add @_nu/react-avatar @_nu/css-acss
-```
-
-- [@\_nu/react-avatar](https://nu-system.github.io/react/avatar/): 实现逻辑
-- [@\_nu/css-acss](https://nu-system.github.io/css/acss/): 实现样式
-
 ### HTML
 
 `<Avatar src="/avatar.717cf745.jpg" alt="hello" size={40} />`

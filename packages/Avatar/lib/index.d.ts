@@ -1,16 +1,20 @@
 import * as React from 'react';
 
-export interface AvatarProps {
-  className?: string;
-  alt?: string;
-  src?: string;
-  size?: string | number;
-  errorBg?: string | (() => React.ReactNode);
-  children?: React.ReactNode;
+interface DefaultClass {
+  component?: string;
+  ph?: string;
+  img?: string;
 }
 
-declare interface Avatar<P extends AvatarProps> {
-  props: P;
+export interface ComponentProps
+  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'placeholder'> {
+  Component?: JSX.Element | string | null;
+  before?: JSX.Element | string | null;
+  size?: Number | string;
+  onError?: (event: React.SyntheticEvent<HTMLImageElement, Event>) => boolean;
+  imgDefaultSize?: Number | string;
+  placeholder?: JSX.Element | string | null;
+  defaultClassNames?: () => DefaultClass | DefaultClass;
 }
-
-export default Avatar;
+declare const _default: (props?: ComponentProps) => JSX.Element;
+export default _default;

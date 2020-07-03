@@ -1,7 +1,3 @@
-import { AvatarProps } from '../../../lib/index';
-
-declare interface Avatar<P extends AvatarProps> {
-  props: P;
-}
-
-export default Avatar;
+import { ComponentProps } from '../../src/index';
+declare const _default: (props?: ComponentProps) => JSX.Element;
+export default _default;

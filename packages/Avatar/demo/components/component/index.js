@@ -3,6 +3,10 @@ import NuAvatar from '../../../src/index';
 import '@_nu/css-acss';
 import './index.css';
 
-const Avatar = (props) => <NuAvatar {...props} />;
+NuAvatar.defaultProps.defaultClassNames = {
+  component: 'avatar',
+  ph: 'ph',
+  img: 'img',
+};
 
-export default Avatar;
+export default NuAvatar;
