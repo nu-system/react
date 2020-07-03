@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.3.0...@_nu/react-avatar@0.3.1) (2020-07-03)
+
+
+### Bug Fixes
+
+* avatar placeholder 添加 aria-hidden ([31dfb04](https://github.com/nu-system/react/commit/31dfb04b64ec496f72471cc9928dbd07fe677906))
+
+
+
+
+
 # [0.3.0](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.2.3...@_nu/react-avatar@0.3.0) (2020-07-03)
 
 
