@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/nu-system/react-button/compare/@_nu/react-button@1.3.1...@_nu/react-button@1.4.0) (2020-07-03)
+
+
+### Bug Fixes
+
+* 添加依赖 ([1f96bc6](https://github.com/nu-system/react-button/commit/1f96bc6d0df16f6b25fb34dcb6df0f811d521056))
+
+
+### Features
+
+* 优化avatar接口 ([660d1dd](https://github.com/nu-system/react-button/commit/660d1dd5c34a4949187a82328e508a2e483e6c52))
+
+
+
+
+
 ## [1.3.1](https://github.com/nu-system/react-button/compare/@_nu/react-button@1.3.0...@_nu/react-button@1.3.1) (2020-07-02)
 
 
