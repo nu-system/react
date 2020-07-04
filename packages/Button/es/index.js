@@ -4,17 +4,17 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 /**
  * Button
  * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
  */
 
 var NuButton = React.forwardRef(function NuButton(_ref, ref) {
-  var component = _ref.component,
+  var Component = _ref.Component,
       onBeforeReturn = _ref.onBeforeReturn,
-      otherProps = _objectWithoutProperties(_ref, ["component", "onBeforeReturn"]);
+      otherProps = _objectWithoutProperties(_ref, ["Component", "onBeforeReturn"]);
 
   var href = otherProps.href,
       role = otherProps.role,
@@ -23,19 +23,19 @@ var NuButton = React.forwardRef(function NuButton(_ref, ref) {
       title = otherProps.title; // if exist Component use component
   // or ComponentTag rely on href
 
-  var ComponentTag = component ? component : href ? "a" : "button"; // only button got button type
+  var ComponentTag = Component ? Component : href ? 'a' : 'button'; // only button got button type
 
-  if (ComponentTag === "button" && !type) {
-    otherProps.type = "button";
+  if (ComponentTag === 'button' && !type) {
+    otherProps.type = 'button';
   } // Got role attr when ComponentTag is not button
 
 
-  if (ComponentTag !== "button" && !role) {
-    otherProps.role = "button";
+  if (ComponentTag !== 'button' && !role) {
+    otherProps.role = 'button';
   } // set the title of button
 
 
-  if (typeof children === "string" && !title) {
+  if (typeof children === 'string' && !title) {
     otherProps.title = children;
   } // on before component return
 
@@ -59,6 +59,6 @@ NuButton.propTypes = {
   href: PropTypes.string,
 
   /** shell of button */
-  component: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType])
+  Component: PropTypes.oneOfType([PropTypes.node, PropTypes.elementType])
 };
 export default NuButton;

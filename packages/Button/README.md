@@ -63,7 +63,7 @@ export default NuButton;
 | Prop      |               type               | Default  |   Function   |
 | :-------- | :------------------------------: | :------: | :----------: |
 | href      |              string              | '&nbsp;' | href for `a` |
-| component | string &#124; func &#124; object | 'button' |   tagName    |
+| Component | string &#124; func &#124; object | 'button' |   tagName    |
 
 ```JSX
 <Button className="_fill">hello</Button>

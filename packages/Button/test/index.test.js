@@ -50,7 +50,7 @@ describe('api test', () => {
   });
   it('Custom Component TagName', () => {
     const TagName = 'strong';
-    const buttonShallow = shallow(<Button component={TagName}>button</Button>);
+    const buttonShallow = shallow(<Button Component={TagName}>button</Button>);
     expect(buttonShallow.find(TagName).length).toBe(1);
     expect(buttonShallow.prop('role')).toBe('button');
     // console.log(buttonShallow.html());

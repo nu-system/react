@@ -22,9 +22,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
  * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
  */
 var NuButton = _react.default.forwardRef(function NuButton(_ref, ref) {
-  var component = _ref.component,
+  var Component = _ref.Component,
       onBeforeReturn = _ref.onBeforeReturn,
-      otherProps = _objectWithoutProperties(_ref, ["component", "onBeforeReturn"]);
+      otherProps = _objectWithoutProperties(_ref, ["Component", "onBeforeReturn"]);
 
   var href = otherProps.href,
       role = otherProps.role,
@@ -33,19 +33,19 @@ var NuButton = _react.default.forwardRef(function NuButton(_ref, ref) {
       title = otherProps.title; // if exist Component use component
   // or ComponentTag rely on href
 
-  var ComponentTag = component ? component : href ? "a" : "button"; // only button got button type
+  var ComponentTag = Component ? Component : href ? 'a' : 'button'; // only button got button type
 
-  if (ComponentTag === "button" && !type) {
-    otherProps.type = "button";
+  if (ComponentTag === 'button' && !type) {
+    otherProps.type = 'button';
   } // Got role attr when ComponentTag is not button
 
 
-  if (ComponentTag !== "button" && !role) {
-    otherProps.role = "button";
+  if (ComponentTag !== 'button' && !role) {
+    otherProps.role = 'button';
   } // set the title of button
 
 
-  if (typeof children === "string" && !title) {
+  if (typeof children === 'string' && !title) {
     otherProps.title = children;
   } // on before component return
 
@@ -70,7 +70,7 @@ NuButton.propTypes = {
   href: _propTypes.default.string,
 
   /** shell of button */
-  component: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.elementType])
+  Component: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.elementType])
 };
 var _default = NuButton;
 exports.default = _default;
