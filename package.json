@@ -13,12 +13,14 @@
     "build:img": "PACKAGE=Img father build",
     "build:select": "PACKAGE=Select father build",
     "build:toast": "PACKAGE=Toast father build",
+    "build:switch": "PACKAGE=NuSwitch father build",
     "demo:button": "yarn workspace @_nu/react-button nwb serve-react-demo",
     "demo:avatar": "yarn workspace @_nu/react-avatar nwb serve-react-demo",
     "demo:dialog": "yarn workspace @_nu/react-dialog nwb serve-react-demo",
     "demo:img": "yarn workspace @_nu/react-img nwb serve-react-demo",
     "demo:select": "yarn workspace @_nu/react-select nwb serve-react-demo",
-    "demo:toast": "yarn workspace @_nu/react-toast nwb serve-react-demo"
+    "demo:toast": "yarn workspace @_nu/react-toast nwb serve-react-demo",
+    "demo:switch": "yarn workspace @_nu/react-switch nwb serve-react-demo"
   },
   "config": {
     "commitizen": {
