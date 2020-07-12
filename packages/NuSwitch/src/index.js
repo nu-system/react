@@ -39,7 +39,16 @@ const RenderIcon = ({ Icon, ...props }) => {
  * @constructor
  */
 const NuSwitch = React.forwardRef(function NuSwitch(
-  { Component, Icon, type, children, className, defaultClass, ...otherProps },
+  {
+    Component,
+    Icon,
+    type,
+    children,
+    className,
+    classNameInput,
+    defaultClass,
+    ...otherProps
+  },
   ref,
 ) {
   return (
@@ -70,6 +79,7 @@ NuSwitch.defaultProps = {
   type: 'checkbox',
   children: null,
   className: '',
+  classNameInput: '',
 };
 
 NuSwitch.propTypes = {
@@ -78,8 +88,8 @@ NuSwitch.propTypes = {
     component: PropTypes.string,
     input: PropTypes.string,
   }),
-  /** default class */
-  classInput: PropTypes.string,
+  /** default class of input */
+  classNameInput: PropTypes.string,
   /** input types */
   type: PropTypes.oneOf(['checkbox', 'radio']),
   /** 子元素 */
