@@ -1,6 +1,6 @@
 {
   "name": "@_nu/react-switch",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "No UI dependency switch of react",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -26,7 +26,6 @@
   "peerDependencies": {
     "react": "16.x"
   },
-  "devDependencies": {},
   "keywords": [
     "react-component",
     "ui",
