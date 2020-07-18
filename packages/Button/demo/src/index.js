@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
-import Button from '../Button';
+import Button from '../components/Button';
 
 function Demo() {
-  const [buttonThemeClass, setButtonThemeClass] = useState(
-    'nu_btn btn_bootstrap',
-  );
+  const [buttonThemeClass, setButtonThemeClass] = useState('btn_bootstrap');
 
-  const onThemeChange = e => {
+  const onThemeChange = (e) => {
     setButtonThemeClass(e.currentTarget.value);
   };
   return (
     <div className="App">
-      <h3>实心按钮 fill</h3>
       <p>
         点我切换主题：
         <select onChange={onThemeChange}>
@@ -23,35 +20,38 @@ function Demo() {
       <p>
         原生按钮： <button type="button">Button</button>
       </p>
+      <h3>实心按钮 fill</h3>
       <p>
-        <Button className={`${buttonThemeClass} _primary`}>
+        <Button className={`${buttonThemeClass} _fill`}>Default</Button>
+        <Button className={`${buttonThemeClass} _fill _primary`}>
           Primary
         </Button>
-        <Button className={`${buttonThemeClass} _secondary`}>
+        <Button className={`${buttonThemeClass} _fill _secondary`}>
           Secondary
         </Button>
-        <Button className={`${buttonThemeClass} _warning`}>
+        <Button className={`${buttonThemeClass} _fill _warning`}>
           Warning
         </Button>
-        <Button className={`${buttonThemeClass} _success`}>
+        <Button className={`${buttonThemeClass} _fill _success`}>
           Success
         </Button>
-        <Button className={`${buttonThemeClass} _danger`}>Danger</Button>
+        <Button className={`${buttonThemeClass} _fill _danger`}>Danger</Button>
       </p>
       <p>
-        <Button disabled className={`${buttonThemeClass} _primary`}>
+        <Button className={`${buttonThemeClass} _fill`}>Default</Button>
+        <Button disabled className={`${buttonThemeClass} _fill _primary`}>
           Primary
         </Button>
-        <Button disabled className={`${buttonThemeClass} _secondary`}>
+        <Button disabled className={`${buttonThemeClass} _fill _secondary`}>
           Secondary
         </Button>
-        <Button disabled className={`${buttonThemeClass} _warning`}>
+        <Button disabled className={`${buttonThemeClass} _fill _warning`}>
           Warning
         </Button>
-        <Button disabled className={`${buttonThemeClass} _success`}>
+        <Button disabled className={`${buttonThemeClass} _fill _success`}>
           Success
         </Button>
-        <Button disabled className={`${buttonThemeClass} _danger`}>
+        <Button disabled className={`${buttonThemeClass} _fill _danger`}>
           Danger
         </Button>
       </p>
@@ -106,7 +106,9 @@ function Demo() {
         <Button className={`${buttonThemeClass} _link _danger`}>Danger</Button>
       </p>
       <p>
-        <Button disabled className={`${buttonThemeClass} _link`}>disabled</Button>
+        <Button disabled className={`${buttonThemeClass} _link`}>
+          disabled
+        </Button>
         <Button disabled className={`${buttonThemeClass} _link _primary`}>
           Primary
         </Button>

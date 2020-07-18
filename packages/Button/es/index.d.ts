@@ -4,6 +4,7 @@ export interface ComponentProps
   href?: string;
   Component?: React.ReactNode | React.Component;
   children?: React.ReactNode;
+  classNames?: string;
 }
 declare const _default: (props?: ComponentProps) => JSX.Element;
 export default _default;

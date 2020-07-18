@@ -18,53 +18,49 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /**
- * Button
- * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
+ * 按钮组件
+ * @param Component
+ * @param classNames
+ * @param className
+ * @param otherProps
+ * @param ref
+ * @returns {*}
+ * @constructor
  */
 var NuButton = _react.default.forwardRef(function NuButton(_ref, ref) {
   var Component = _ref.Component,
-      onBeforeReturn = _ref.onBeforeReturn,
-      otherProps = _objectWithoutProperties(_ref, ["Component", "onBeforeReturn"]);
+      classNames = _ref.classNames,
+      className = _ref.className,
+      otherProps = _objectWithoutProperties(_ref, ["Component", "classNames", "className"]);
 
-  var href = otherProps.href,
-      role = otherProps.role,
-      type = otherProps.type,
-      children = otherProps.children,
-      title = otherProps.title; // if exist Component use component
+  // if exist Component use component
   // or ComponentTag rely on href
+  var ComponentTag = Component ? Component : otherProps.href ? 'a' : 'button'; // only button got button type
 
-  var ComponentTag = Component ? Component : href ? 'a' : 'button'; // only button got button type
-
-  if (ComponentTag === 'button' && !type) {
+  if (ComponentTag === 'button' && !otherProps.type) {
     otherProps.type = 'button';
   } // Got role attr when ComponentTag is not button
 
 
-  if (ComponentTag !== 'button' && !role) {
+  if (ComponentTag !== 'button' && !otherProps.role) {
     otherProps.role = 'button';
-  } // set the title of button
+  }
 
-
-  if (typeof children === 'string' && !title) {
-    otherProps.title = children;
-  } // on before component return
-
-
-  var renderProps = onBeforeReturn(otherProps);
+  var classNameNew = [classNames, className].filter(function (item) {
+    return !!item;
+  }).join(' ') || null;
   return /*#__PURE__*/_react.default.createElement(ComponentTag, _extends({
+    className: classNameNew,
     ref: ref
-  }, renderProps));
+  }, otherProps));
 });
 
 NuButton.defaultProps = {
-  /** on before component return */
-  onBeforeReturn: function onBeforeReturn(props) {
-    return props;
-  }
+  classNames: 'nu_btn'
 };
 NuButton.propTypes = {
-  /** on before component return */
-  onBeforeReturn: _propTypes.default.func,
+  /** core className */
+  classNames: _propTypes.default.string,
 
   /** href for tag a */
   href: _propTypes.default.string,

@@ -1,8 +1,8 @@
-# Button
+# NuButton
 
-[![npm package][npm-badge]][npm-url]
-[![npm downloads][npm-downloads]][npm-url]
-[![github][git-badge]][git-url]
+| npm package                          | npm downloads                              | github                          |
+| ------------------------------------ | ------------------------------------------ | ------------------------------- |
+| [![npm package][npm-badge]][npm-url] | [![npm downloads][npm-downloads]][npm-url] | [![github][git-badge]][git-url] |
 
 [npm-badge]: https://img.shields.io/npm/v/@_nu/react-button.svg
 [npm-url]: https://www.npmjs.org/package/@_nu/react-button
@@ -10,97 +10,91 @@
 [git-url]: https://github.com/nu-system/react-button
 [git-badge]: https://img.shields.io/github/stars/nu-system/react-button.svg?style=social
 
-No UI dependency button of react.
+没有 UI 依赖的按钮组件.
 
 <iframe src="https://codesandbox.io/embed/throbbing-leftpad-juijc?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2FButton.js" title="throbbing-leftpad-juijc" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-English | [简体中文](./lang/zh.md)
+## 做了啥？
 
-## Features
+- 当 `props` 上有 `href` 时，会用 `a` 替换 `button`;
+- 默认为 `button` 添加 `type="button"`;
+- 当元素标签不是 `button` 时会默认添加 `role="button"`；
 
-- When got href tagName will replace by `a`;
-- When tagName is `button` will got `type="button"` as default;
-- When children is `<string>` and title will be `children` as default;
-- When tagName is not `button` will got `role="button"`
-
-## Install
+## 安装
 
 ```
 yarn add @_nu/react-button @_nu/css-button
 ```
 
-- [@\_nu/react-button](https://nu-system.github.io/react/button/): Login only
-- [@\_nu/css-button](https://nu-system.github.io/css/button/): UI Just
+- [@\_nu/react-button](https://nu-system.github.io/react/button/): 逻辑组件
+- [@\_nu/css-button](https://nu-system.github.io/css/button/): 样式组件
 
-### Custom
+### 二次封装
 
 ```JSX
-/* @components/Button/index.js */
+/* @/components/Button/index.js */
+import NuButton from "@_nu/react-button";         // import
 import "@_nu/css-button";                         // core style
 import "@_nu/css-button/css/skins/bootstrap.css"; // skin of bootstrap
 import './style.css';                             // custome style
-import NuButton from "@_nu/react-button";         // import
-
-// Add default class
-NuButton.defaultProps.onBeforeReturn = ({className='', props})=> ({
-  className:`nu_btn ${className}`
-  ...props
+const Button = React.forwardRef(function Button(props, ref) {
+  return <NuButton classNames="nu_btn" ref={ref} {...props} />;
 });
 
-export default NuButton;
+export default Button;
 ```
 
-### Use
+> ⚠️：注意这里 `classNames` 和 `className`的区别, 见[底部 API](#Api)。
 
-```JSX
-<Button className="_fill _primay">Button</Button>
-<Button className="_fill _primay" href="/nu-button">Link Button</Button>
-<Button component="strong" className="_fill _primay">Button</Button>
+### `index.d.ts`
+
+```jsx
+import { ComponentProps } from '@_nu/react-button';
+declare const _default: (props?: ComponentProps) => JSX.Element;
+export default _default;
 ```
 
-## Api
+> ⚠️：二次封装之后，代码提示会丢失，需要额外添加 `index.d.ts` 维持代码提示！
 
-| Prop      |               type               | Default  |   Function   |
-| :-------- | :------------------------------: | :------: | :----------: |
-| href      |              string              | '&nbsp;' | href for `a` |
-| Component | string &#124; func &#124; object | 'button' |   tagName    |
+### 使用
 
 ```JSX
+import Button from '@/components/Button';
+
+// 这里省略了其它代码
+
 <Button className="_fill">hello</Button>
-<Button className="_fill" component="strong">hello</Button>
+<Button className="_fill" Component="strong">hello</Button>
 <Button className="_fill"><strong>hello</strong></Button>
 <Button className="_fill" disabled>hello</Button>
 <Button className="_fill _primary">hello</Button>
 <Button className="_fill _primary" href="." title="hello">hello</Button>
 ```
 
-=>
+会渲染成：
 
 ```HTML
-<button class="nu_btn _fill" type="button" title="hello">hello</button>
-<strong class="nu_btn _fill" role="button" title="hello">hello</strong>
+<button class="nu_btn _fill" type="button">hello</button>
+<strong class="nu_btn _fill" role="button">hello</strong>
 <button class="nu_btn _fill" type="button"><strong>hello</strong></button>
-<button class="nu_btn _fill" type="button" disabled title="hello">hello</button>
-<button class="nu_btn _fill _primary" type="button" title="hello">hello</button>
+<button class="nu_btn _fill" type="button" disabled>hello</button>
+<button class="nu_btn _fill _primary" type="button">hello</button>
 <a class="nu_btn _fill _primary" role="button" href="." title="hello">hello</a>
 ```
 
-| defaultProps   |   type   |      Default      |           Function            |
-| :------------- | :------: | :---------------: | :---------------------------: |
-| onBeforeReturn | function | `(props)=> props` | custom props on before return |
+> ⚠️：这里是在定义了 `classNames="nu_btn"` 的状况之下
 
-## Custom style？
+## Api
 
-Go to [@\_nu/css-button](https://nu-system.github.io/css/button/)
+| 属性       |               类型               |  默认值  |           功能            |
+| :--------- | :------------------------------: | :------: | :-----------------------: |
+| href       |              string              | '&nbsp;' |       href for `a`        |
+| Component  | string &#124; func &#124; object | 'button' |          tagName          |
+| className  |              string              |   '-'    |         className         |
+| classNames |              string              | 'nu_btn' | 会添加到 `className` 之前 |
 
-## test
+> ⚠️：classNames 主要是用于在二次封装到时候，添加默认的 className
 
-```
-// How to start
-npm test
-```
+## 如何修改样式？
 
-```
-// generate coverage report
-npm run test:coverage
-```
+查看样式组件 [@\_nu/css-button](https://nu-system.github.io/zh/css/button/)

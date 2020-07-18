@@ -2,47 +2,46 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Button
- * @type {React.ForwardRefExoticComponent<React.PropsWithoutRef<{readonly component?: *}> & React.RefAttributes<unknown>>}
+ * 按钮组件
+ * @param Component
+ * @param classNames
+ * @param className
+ * @param otherProps
+ * @param ref
+ * @returns {*}
+ * @constructor
  */
 const NuButton = React.forwardRef(function NuButton(
-  { Component, onBeforeReturn, ...otherProps },
+  { Component, classNames, className, ...otherProps },
   ref,
 ) {
-  const { href, role, type, children, title } = otherProps;
-
   // if exist Component use component
   // or ComponentTag rely on href
-  const ComponentTag = Component ? Component : href ? 'a' : 'button';
+  const ComponentTag = Component ? Component : otherProps.href ? 'a' : 'button';
 
   // only button got button type
-  if (ComponentTag === 'button' && !type) {
+  if (ComponentTag === 'button' && !otherProps.type) {
     otherProps.type = 'button';
   }
 
   // Got role attr when ComponentTag is not button
-  if (ComponentTag !== 'button' && !role) {
+  if (ComponentTag !== 'button' && !otherProps.role) {
     otherProps.role = 'button';
   }
 
-  // set the title of button
-  if (typeof children === 'string' && !title) {
-    otherProps.title = children;
-  }
+  const classNameNew =
+    [classNames, className].filter((item) => !!item).join(' ') || null;
 
-  // on before component return
-  const renderProps = onBeforeReturn(otherProps);
-  return <ComponentTag ref={ref} {...renderProps} />;
+  return <ComponentTag className={classNameNew} ref={ref} {...otherProps} />;
 });
 
 NuButton.defaultProps = {
-  /** on before component return */
-  onBeforeReturn: (props) => props,
+  classNames: 'nu_btn',
 };
 
 NuButton.propTypes = {
-  /** on before component return */
-  onBeforeReturn: PropTypes.func,
+  /** core className */
+  classNames: PropTypes.string,
   /** href for tag a */
   href: PropTypes.string,
   /** shell of button */
