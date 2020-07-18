@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/nu-system/react-button/compare/@_nu/react-button@1.4.1...@_nu/react-button@1.4.2) (2020-07-18)
+
+
+### Bug Fixes
+
+* 优化按钮组件接口 ([19ce5f9](https://github.com/nu-system/react-button/commit/19ce5f9409fd1cb70c670393ce50ddd6686d0b19))
+
+
+
+
+
 ## [1.4.1](https://github.com/nu-system/react-button/compare/@_nu/react-button@1.4.0...@_nu/react-button@1.4.1) (2020-07-04)
 
 
