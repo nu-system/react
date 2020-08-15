@@ -16,6 +16,7 @@
     "build:switch": "PACKAGE=NuSwitch father build",
     "demo:button": "yarn workspace @_nu/react-button nwb serve-react-demo",
     "demo:avatar": "yarn workspace @_nu/react-avatar nwb serve-react-demo",
+    "demo:modal": "yarn workspace @_nu/react-modal nwb serve-react-demo",
     "demo:dialog": "yarn workspace @_nu/react-dialog nwb serve-react-demo",
     "demo:img": "yarn workspace @_nu/react-img nwb serve-react-demo",
     "demo:select": "yarn workspace @_nu/react-select nwb serve-react-demo",
@@ -48,6 +49,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@_nu/css-dialog": "^0.1.0",
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "@types/react": "^16.9.43",

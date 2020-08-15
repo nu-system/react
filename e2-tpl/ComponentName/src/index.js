@@ -17,7 +17,7 @@ import PropTypes from "prop-types";
  * @returns {*}
  * @constructor
  */
-const Nu<%= e2.ttc(e2.componentName) %>= React.forwardRef(function NuS<%= e2.ttc(e2.componentName) %>(
+const Nu<%= e2.ttc(e2.componentName) %>= React.forwardRef(function Nu<%= e2.ttc(e2.componentName) %>(
   {
     className = '',
     Component = 'div',

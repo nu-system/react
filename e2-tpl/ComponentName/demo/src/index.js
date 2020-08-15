@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Switch from '../components/Swtich';
+import <%= e2.ttc(e2.componentName) %> from '../components/<%= e2.ttc(e2.componentName) %>';
 
 function Demo() {
   return (
     <div className="App">
-      <Switch />
+      <<%= e2.ttc(e2.componentName) %> />
     </div>
   );
 }

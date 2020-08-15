@@ -1,7 +1,7 @@
 {
-  "name": "@_nu/react-button",
-  "version": "1.4.2",
-  "description": "No UI dependency Button of react",
+  "name": "@_nu/react-modal",
+  "version": "0.0.1",
+  "description": "No UI dependency modal of react",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "module": "es/index.js",
@@ -9,13 +9,13 @@
   "license": "MIT",
   "repository": "git@github.com:nu-system/react.git",
   "bugs": "https://github.com/nu-system/react/issues",
-  "homepage": "https://nu-system.github.io/react/button/",
+  "homepage": "https://nu-system.github.io/react/",
   "files": [
     "es",
     "lib",
     "src",
     "lang",
-    "demo"
+    "../demo"
   ],
   "publishConfig": {
     "access": "public"
@@ -26,11 +26,7 @@
   "peerDependencies": {
     "react": "16.x"
   },
-  "devDependencies": {
-    "@_nu/css-button": "^0.0.8",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8"
-  },
+  "devDependencies": {},
   "keywords": [
     "react-component",
     "ui",
@@ -38,7 +34,7 @@
     "nu-system",
     "react",
     "react-ui",
-    "button"
+    "modal"
   ],
   "config": {
     "commitizen": {
@@ -48,6 +44,5 @@
   "scripts": {
     "demo": "nwb serve-react-demo",
     "build": "father build"
-  },
-  "gitHead": "17e1330d1d980ec2f629ce14bb2f7d8d6bcf7e26"
+  }
 }
