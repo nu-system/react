@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/nu-system/react-dialog/compare/@_nu/react-dialog@1.1.4...@_nu/react-dialog@1.1.5) (2020-08-16)
+
+
+### Bug Fixes
+
+* update ([228f1c1](https://github.com/nu-system/react-dialog/commit/228f1c1995f2a672f92e3ce68cf94373e5e29920))
+
+
+
+
+
 ## [1.1.4](https://github.com/nu-system/react-dialog/compare/@_nu/react-dialog@1.1.3...@_nu/react-dialog@1.1.4) (2020-07-03)
 
 

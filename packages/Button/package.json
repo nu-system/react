@@ -1,6 +1,6 @@
 {
   "name": "@_nu/react-button",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "No UI dependency Button of react",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

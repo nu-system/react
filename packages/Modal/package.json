@@ -1,6 +1,6 @@
 {
   "name": "@_nu/react-modal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "No UI dependency modal of react",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
