@@ -1,54 +1,51 @@
-# @\_nu/react-dialog
+# @\_nu/react-modal
 
 [![npm package][npm-badge]][npm-url]
 [![npm downloads][npm-downloads]][npm-url]
 [![github][git-badge]][git-url]
 
-[npm-badge]: https://img.shields.io/npm/v/@_nu/react-dialog.svg
-[npm-url]: https://www.npmjs.org/package/@_nu/react-dialog
-[npm-downloads]: https://img.shields.io/npm/dw/@_nu/react-dialog
-[git-url]: https://github.com/nu-system/react-dialog
-[git-badge]: https://img.shields.io/github/stars/nu-system/react-dialog.svg?style=social
+[npm-badge]: https://img.shields.io/npm/v/@_nu/react-modal.svg
+[npm-url]: https://www.npmjs.org/package/@_nu/react-modal
+[npm-downloads]: https://img.shields.io/npm/dw/@_nu/react-modal
+[git-url]: https://github.com/nu-system/react
+[git-badge]: https://img.shields.io/github/stars/nu-system/react.svg?style=social
 
-English | [简体中文](./lang/zh.md)
+[English](../README.md) | 简体中文
 
-A fully accessible、flexible、unstyled React dialog component.
+一个兼顾无障碍范围，易用性，且没有 UI 依赖的 React 模态框组件.
 
-**nu-react-dialog** dose not output any style, All the style comes from [@\_nu/css-dialog](https://nu-system.github.io/css/dialog/)。
+`@_nu/react-modal` 本身不会输出任何样式，所有 demo 样式均来自于[@\_nu/css-modal](https://nu-system.github.io/css/modal/)。
 
-<iframe src="https://codesandbox.io/embed/winter-https-jxp4p?fontsize=14&hidenavigation=1" title="nu-dialog-react" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-## Installation
-
-```
-$ npm install @_nu/react-dialog @_nu/css-dialog
-# or
-$ yarn add @_nu/react-dialog @_nu/css-dialog
-```
-
-## Custome
-
-Creact a new component dialog in your components file.
+## 安装
 
 ```
-components/
-   └── Dialog/
+$ yarn add @_nu/react-modal
+```
+
+## 二次封装
+
+在你的项目组件库文件夹中创建一个新的 Modal 组件.
+
+```
+src/components/
+   └── Modal/
        ├── index.js
        └── style.css
 ```
 
 ```JSX
-// components/Dialog/index.js
-import NuDialog from "@_nu/react-dialog";
-import "@_nu/css-dialog";
-import "@_nu/css-dialog/css/position/middle.css";
-// your custom style
+// components/Modal/index.js
+import NuModal from "@_nu/react-modal";
+import "@_nu/css-modal";
+
+// 自定义你的模态框样式
 import "./index.css";
 
 export default NuDialog;
 ```
 
-## Usage
+## 使用
 
 ```JSX
 import React, { useState } from "react";
@@ -186,17 +183,17 @@ Dialog.propTypes = {
 }
 ```
 
-you just need define the start status of `.nu_dialog`.
+你只需要定义 `.nu_dialog` 的起点状态即可。
 
-## Contributing & Development
+## 贡献与开发
 
-Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+这个项目是与贡献者行为准则一起发布的。参与本项目，代表您同意遵守其条款。
 
-Run the demos with `npm start`.
+运行 demo `npm start`.
 
-## Prior art
+## 技术方案
 
-`@_nu/react-dialog` was build on those awesome projects:
+`@_nu/react-dialog` 灵感来自以下几个优秀的开源框架：
 
 - [react-aria-modal](https://github.com/davidtheclark/react-aria-modal)
 - [focus-trap-react](https://github.com/davidtheclark/focus-trap-react)

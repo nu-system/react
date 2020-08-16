@@ -24,6 +24,7 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
+    "@_nu/css-modal": "^0.0.5",
     "react": "16.x"
   },
   "devDependencies": {

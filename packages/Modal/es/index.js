@@ -5,6 +5,5 @@
  */
 import NuModal from './Modal';
 import NuMask from './Mask';
-
 export default NuModal;
 export { NuMask };

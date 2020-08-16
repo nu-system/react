@@ -1,3 +1,7 @@
-import Modal from '../../../src';
-import "./style.css";
-export default Modal;
+import React from 'react';
+import NuModal, { NuMask } from '../../../src';
+import '@_nu/css-modal';
+
+NuModal.defaultProps.Mask = <NuMask />;
+
+export default NuModal;

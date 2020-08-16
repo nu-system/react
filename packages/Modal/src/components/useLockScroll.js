@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 
 const useLockScroll = (enabled) => {
@@ -36,6 +35,8 @@ const useLockScroll = (enabled) => {
       unlock();
     };
   }, [enabled]);
+
+  return null;
 };
 
 export default useLockScroll;

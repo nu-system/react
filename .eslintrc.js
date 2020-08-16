@@ -20,5 +20,8 @@ module.exports = {
     'react/require-default-props': [0],
     'react/jsx-filename-extension': [0],
     'react/jsx-props-no-spreading': [0],
+    'no-unused-expressions': [0],
+    'react/forbid-prop-types': [0],
+    'prefer-arrow-callback': [0],
   },
 };

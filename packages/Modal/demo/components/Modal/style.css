@@ -4,10 +4,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
-}
-.nu_modal[open] {
   display: block;
+  visibility: hidden;
+  border: none 0;
+  opacity: 0;
+  transition: opacity 200ms, visibility 200ms;;
+}
+
+.nu_modal[open] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 200ms;
 }
 
 .nu_mask {
@@ -18,4 +25,8 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
+}
+button.nu_mask{
+  border: none 0;
+  -webkit-appearance: none;
 }

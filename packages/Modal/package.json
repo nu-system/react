@@ -21,12 +21,13 @@
     "access": "public"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "focus-trap-react": "^7.0.1",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.13.1"
   },
   "peerDependencies": {
     "react": "16.x"
   },
-  "devDependencies": {},
   "keywords": [
     "react-component",
     "ui",
@@ -36,13 +37,11 @@
     "react-ui",
     "modal"
   ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "scripts": {
     "demo": "nwb serve-react-demo",
     "build": "father build"
+  },
+  "devDependencies": {
+    "@_nu/css-modal": "^0.0.5"
   }
 }
