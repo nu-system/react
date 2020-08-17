@@ -1,0 +1,4 @@
+@charset "UTF-8";
+textarea{font-family:inherit}
+.nu_textarea{display:block}
+.nu_textarea>textarea,textarea.nu_textarea{outline:0;-webkit-appearance:none;word-break:break-all;vertical-align:top;box-sizing:border-box;resize:none;overflow:auto;width:100%;border:none;line-height:20px;padding:9px 8px;border:1px solid #ddd;border-radius:4px;background-color:#fff;color:#333;font-size:14px;transition:border-color .15s,background-color .15s}

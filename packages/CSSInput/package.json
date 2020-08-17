@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "CSS Input",
   "repository": "git@github.com:nu-system/react.git",
+  "bugs": "https://github.com/nu-system/react/issues",
   "homepage": "https://github.com/nu-system/css-input",
   "author": "ziven27",
   "license": "MIT",

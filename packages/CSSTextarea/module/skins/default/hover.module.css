@@ -1,0 +1,4 @@
+.nu_textarea > textarea:hover,
+textarea.nu_textarea:hover {
+  border-color: #ccc;
+}

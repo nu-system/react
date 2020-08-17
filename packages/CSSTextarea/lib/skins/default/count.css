@@ -1,0 +1,4 @@
+.nu_textarea_x{position:relative;display:block}
+.nu_textarea_x .nu_textarea{display:block}
+.nu_textarea_x textarea{padding-bottom:30px}
+.nu_textarea_x>.nu_textarea_count{position:absolute;right:10px;bottom:0;line-height:32px;color:#a2a9b6;font-size:12px;text-align:right;z-index:1}

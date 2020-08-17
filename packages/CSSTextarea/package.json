@@ -1,32 +1,27 @@
 {
-  "name": "@_nu/css-dialog",
-  "version": "0.1.5",
-  "description": "NU 「 no-ui 」 组件库系统 nu-system「 弹窗组件 」",
-  "author": "yfe-team",
-  "license": "MIT",
+  "name": "@_nu/css-textarea",
+  "version": "0.0.1",
+  "description": "CSS textarea",
+  "homepage": "https://github.com/nu-system/css-textarea",
   "repository": "git@github.com:nu-system/react.git",
   "bugs": "https://github.com/nu-system/react/issues",
-  "homepage": "https://nu-system.github.io/css/dialog/",
+  "author": "sunmeiye",
   "main": "lib/index.css",
   "module": "module/index.module.css",
   "publishConfig": {
     "access": "public"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "files": [
-    "lib",
+    "demo",
+    "lang",
     "src",
-    "module",
-    "demo"
+    "lib"
   ],
   "keywords": [
     "!ui",
-    "dialog",
-    "modal",
-    "dialog-system",
+    "nu-system",
+    "css-textarea",
+    "textarea",
     "css"
   ],
   "scripts": {
