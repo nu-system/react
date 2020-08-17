@@ -1,0 +1,47 @@
+{
+  "name": "@_nu/react-img",
+  "version": "0.1.4",
+  "description": "react-img React component",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib",
+    "src",
+    "lang",
+    "demo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "father": "^2.29.5",
+    "nwb": "^0.25.2"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "author": "ziven27",
+  "homepage": "https://nu-system.github.io/react",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react.git",
+  "keywords": [
+    "react-component",
+    "react-img",
+    "img"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "demo": "nwb serve-react-demo",
+    "build": "father build"
+  },
+  "gitHead": "6a4ea98e33a28bc87263e316d1d00f92d5744452"
+}

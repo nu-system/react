@@ -1,0 +1,34 @@
+/*====== 上下左右居中弹窗*/
+.nu_modal._middle {
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /* 水平居中关键 */
+  text-align: center;
+  /* 让 vertical-align: middle; 完美垂直居中 */
+  font-size: 0;
+}
+
+/* .nu_dialog 元素和这个伪元素垂直居中 */
+.nu_modal._middle:after {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+  margin-left: -1px; /* 防止 .yf_dialog 过宽，伪元素换行 */
+}
+
+._middle .nu_dialog {
+  width: 90%; /* 在小屏下，流出左右空白区域*/
+  max-width: 600px;
+  display: inline-block; /* inline-block布局 */
+  vertical-align: middle; /* 对齐 .nu_dialog:after */
+  text-align: left; /* 让 dialog 内部文字还原到左对齐 */
+  font-size: 16px; /* 让 dialog 内部文字还原到基础字号 */
+}
+
+// 动效
+._middle .nu_dialog {
+  transform: translate(0, 50px);
+}

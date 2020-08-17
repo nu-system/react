@@ -1,0 +1,47 @@
+@primary: #007bff;
+@secondary: #6c757d;
+@warning: #ffc107;
+@success: #28a745;
+@danger: #dc3545;
+
+
+#BtnColor(@name, @color){
+  .btn_bootstrap._@{name}:not(._fill) {
+    color: @color;
+  }
+  .btn_bootstrap._@{name}._fill{
+    background-color: @color;
+  }
+}
+
+// color
+#BtnColor(primary, @primary);
+#BtnColor(secondary, @secondary);
+#BtnColor(warning, @warning);
+#BtnColor(success, @success);
+#BtnColor(danger, @danger);
+
+// 基础样式
+.btn_bootstrap {
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+// 大号按钮
+.btn_bootstrap._large {
+  height: 48px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+
+// 小号按钮
+.btn_bootstrap._small {
+  height: 32px;
+  padding: 0.25rem 0.5rem;
+  font-size: 12/16*1rem;
+  border-radius: 0.2rem;
+}

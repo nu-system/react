@@ -1,0 +1,49 @@
+{
+  "name": "@_nu/react-dialog",
+  "version": "1.1.5",
+  "description": "A fully accessible、flexible、unstyled React dialog component",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "author": "ziven27",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react.git",
+  "bugs": "https://github.com/nu-system/react/issues",
+  "homepage": "https://nu-system.github.io/react/dialog/",
+  "files": [
+    "es",
+    "lib",
+    "src",
+    "lang",
+    "demo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "focus-trap-react": "^7.0.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "scripts": {
+    "demo": "nwb serve-react-demo",
+    "build": "father build"
+  },
+  "keywords": [
+    "react-component",
+    "ui",
+    "no-ui",
+    "nu-system",
+    "react",
+    "react-ui",
+    "dialog",
+    "modal"
+  ],
+  "gitHead": "6a4ea98e33a28bc87263e316d1d00f92d5744452",
+  "devDependencies": {
+    "@_nu/css-dialog": "^0.1.4"
+  }
+}

@@ -1,0 +1,46 @@
+.nu_btn._loading > * {
+  opacity: 0;
+}
+
+.nu_btn._loading:before,
+.nu_btn._loading:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.25em solid currentColor;
+  border-radius: 100%;
+  top: 50%;
+  margin-top: -0.25em;
+  animation: ball-pulse 1s ease infinite;
+}
+
+.nu_btn._loading:before {
+  left: 50%;
+  margin-left: 4px;
+}
+
+.nu_btn._loading:after {
+  right: 50%;
+  margin-right: 4px;
+  animation-delay: -100ms;
+}
+.nu_btn._fill._loading {
+  &:before,
+  :after {
+    border-color: #ffffff;
+  }
+}
+
+@keyframes ball-pulse {
+  0%,
+  60%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0.1;
+    transform: scale(0.01);
+  }
+}

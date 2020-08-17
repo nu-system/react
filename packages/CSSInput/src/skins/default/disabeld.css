@@ -1,0 +1,5 @@
+input.nu_input:focus,
+.nu_input input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}

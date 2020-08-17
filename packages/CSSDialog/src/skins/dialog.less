@@ -1,0 +1,22 @@
+/* dialog main */
+.nu_dialog {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: transform 200ms;
+  box-sizing: border-box;
+}
+
+.nu_modal[open] .nu_dialog {
+  transform: translate(0, 0);
+}
+
+/* close btn */
+.nu_dialog_close {
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

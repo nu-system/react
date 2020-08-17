@@ -1,0 +1,37 @@
+{
+  "name": "@_nu/css-toast",
+  "version": "0.0.4",
+  "description": "NU 「 no-ui 」 组件库系统 nu-system 「 Toast 组件 」",
+  "author": "yfe-team",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react.git",
+  "bugs": "https://github.com/nu-system/react/issues",
+  "homepage": "https://nu-system.github.io/css/toast/",
+  "main": "lib/index.css",
+  "module": "module/index.module.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "css",
+    "less",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "keywords": [
+    "!ui",
+    "css",
+    "css-component",
+    "ui",
+    "no-ui",
+    "nu-system",
+    "toast",
+    "messgate"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "build": "rm -rf lib && rm -rf ./module && gulp build"
+  }
+}

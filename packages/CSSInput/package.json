@@ -1,0 +1,33 @@
+{
+  "name": "@_nu/css-input",
+  "version": "1.0.4",
+  "description": "CSS Input",
+  "repository": "git@github.com:nu-system/react.git",
+  "homepage": "https://github.com/nu-system/css-input",
+  "author": "ziven27",
+  "license": "MIT",
+  "main": "lib/index.css",
+  "module": "module/index.module.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib",
+    "less",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "keywords": [
+    "!ui",
+    "nu-system",
+    "css-input",
+    "input",
+    "css"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "build": "rm -rf lib && rm -rf ./module && gulp build"
+  }
+}

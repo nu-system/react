@@ -1,0 +1,15 @@
+input.nu_input,
+.nu_input input {
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 3px;
+  font: inherit;
+  background-color: #ffffff;
+  transition: border-color 200ms, color 200ms, background-color 200ms;
+  padding: 0.5em 0.75em;
+  height: 2.5em;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}

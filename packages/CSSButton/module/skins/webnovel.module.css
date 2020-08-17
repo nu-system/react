@@ -1,0 +1,15 @@
+.btn_webnovel{background-repeat:no-repeat}
+.btn_webnovel._primary:not(._fill){color:#3b66f5}
+.btn_webnovel._warning:not(._fill){color:#ff8d29}
+.btn_webnovel._primary._fill{background-image:linear-gradient(45deg,#6da0fb 0,#3b66f5 100%)}
+.btn_webnovel._warning._fill{background-image:linear-gradient(90deg,#ffc152 0,#ff8d29 100%)}
+.btn_webnovel._secondary._fill{background-color:#6c757d}
+.btn_webnovel._fill{border:none 0}
+.btn_webnovel._fill._loading:after,.btn_webnovel._fill._loading:before{border-color:#fff}
+.btn_webnovel._large{height:48px;line-height:48px;padding:0 32px;font-size:20px}
+.btn_webnovel._middle{height:32px;line-height:32px;padding:0 24px;font-size:14px}
+.btn_webnovel._small{height:24px;line-height:24px;padding:0 16px;font-size:12px}
+.btn_webnovel._small._square{width:24px;height:24px}
+.btn_webnovel._middle._square{width:32px;height:32px}
+.btn_webnovel._square{width:40px;height:40px}
+.btn_webnovel._large._square{width:48px;height:48px}

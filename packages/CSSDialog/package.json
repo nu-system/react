@@ -1,0 +1,32 @@
+{
+  "name": "@_nu/css-dialog",
+  "version": "0.1.5",
+  "description": "NU 「 no-ui 」 组件库系统 nu-system「 弹窗组件 」",
+  "author": "yfe-team",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react.git",
+  "bugs": "https://github.com/nu-system/react/issues",
+  "homepage": "https://nu-system.github.io/css/dialog/",
+  "main": "lib/index.css",
+  "module": "module/index.module.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib",
+    "src",
+    "module",
+    "demo"
+  ],
+  "keywords": [
+    "!ui",
+    "dialog",
+    "modal",
+    "dialog-system",
+    "css"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "build": "rm -rf lib && rm -rf ./module && gulp build"
+  }
+}

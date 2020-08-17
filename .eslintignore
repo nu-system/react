@@ -8,3 +8,5 @@ es
 lib
 src/serviceWorker.js
 src/setupTests.js
+gulpfile.js
+__tests__

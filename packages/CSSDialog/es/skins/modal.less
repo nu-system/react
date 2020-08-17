@@ -1,0 +1,26 @@
+.nu_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  visibility: hidden;
+  border: none 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+.nu_modal[open] {
+  visibility: visible;
+}
+
+.nu_modal {
+  opacity: 0;
+  transition: opacity 200ms, visibility 200ms;
+}
+.nu_modal[open] {
+  opacity: 1;
+  transition: opacity 200ms;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/index.css">
+    <link rel="stylesheet" href="../lib/skins/bootstrap.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="NuToast" class="nu_toast">
+        <div class="nu_toast_in">
+            hello!
+        </div>
+    </div>
+    <select id="ToastSelect">
+        <option value="nu_toast">选择你想显示的toast</option>
+        <option value="nu_toast _open">Toast 默认</option>
+        <option value="nu_toast _open _success">Toast success</option>
+        <option value="nu_toast _open _warning">Toast warning</option>
+        <option value="nu_toast _open _danger">Toast danger</option>
+    </select>
+    <script>
+        ToastSelect.onchange=function (e) {
+            var value=e.target.value;
+            NuToast.setAttribute("class",value);
+        }
+    </script>
+</body>
+</html>

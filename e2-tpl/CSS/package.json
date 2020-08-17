@@ -1,0 +1,31 @@
+{
+  "name": "@_nu/css-<%= e2.ttl(e2.componentName) %>",
+  "version": "0.0.0",
+  "description": "无 UI 依赖组件库纯 CSS  <%= e2.ttl(e2.componentName) %> 组件",
+  "author": "<%= e2.authorName %>",
+  "license": "MIT",
+  "repository": "git@github.com:nu-system/react.git",
+  "bugs": "https://github.com/nu-system/react/issues",
+  "homepage": "https://nu-system.github.io/css/<%= e2.ttl(e2.componentName) %>/",
+  "main": "lib/index.css",
+  "module": "module/index.module.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib",
+    "src",
+    "module",
+    "demo"
+  ],
+  "keywords": [
+    "!ui",
+    "<%= e2.ttl(e2.componentName) %>",
+    "<%= e2.ttl(e2.componentName) %>-system",
+    "css"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "build": "rm -rf lib && rm -rf ./module && gulp build"
+  }
+}

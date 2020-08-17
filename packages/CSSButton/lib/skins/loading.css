@@ -1,0 +1,13 @@
+.nu_btn._loading>*{opacity:0}
+.nu_btn._loading:after,.nu_btn._loading:before{content:"";position:absolute;width:0;height:0;border:.25em solid currentColor;border-radius:100%;top:50%;margin-top:-.25em;-webkit-animation:ball-pulse 1s ease infinite;animation:ball-pulse 1s ease infinite}
+.nu_btn._loading:before{left:50%;margin-left:4px}
+.nu_btn._loading:after{right:50%;margin-right:4px;-webkit-animation-delay:-.1s;animation-delay:-.1s}
+.nu_btn._fill._loading :after,.nu_btn._fill._loading:before{border-color:#fff}
+@-webkit-keyframes ball-pulse{
+0%,100%,60%{opacity:1;transform:scale(1)}
+30%{opacity:.1;transform:scale(.01)}
+}
+@keyframes ball-pulse{
+0%,100%,60%{opacity:1;transform:scale(1)}
+30%{opacity:.1;transform:scale(.01)}
+}

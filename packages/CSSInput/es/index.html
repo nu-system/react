@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="skins/default/line.css" />
+    <link rel="stylesheet" href="skins/default/block.css" />
+    <link rel="stylesheet" href="skins/default/large.css" />
+    <link rel="stylesheet" href="skins/default/small.css" />
+    <link rel="stylesheet" href="skins/default/capsule.css" />
+    <style>
+      @font-face {
+        font-family: Emoji;
+        src: local('Apple Color Emojiji'), local('Segoe UI Emoji'),
+          local('Segoe UI Symbol'), local('Noto Color Emoji');
+        unicode-range: U+1F000-1F644, U+203C-3299;
+      }
+      body {
+        font-family: system-ui, —apple-system, Segoe UI, Rototo, Emoji,
+          Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Native</h3>
+    <input type="text" placeholder="enter" />
+
+    <h3>Default</h3>
+    <input class="nu_input" type="text" placeholder="input.nu_input" />
+    <input class="nu_input" type="text" readonly placeholder="readonly" />
+    <input class="nu_input" type="text" disabled placeholder="disabled" />
+    <br />
+    <label class="nu_input">
+      <input type="text" placeholder=".nu_input input" />
+    </label>
+    <label class="nu_input">
+      <input type="text" readonly placeholder="readonly" />
+    </label>
+    <label class="nu_input">
+      <input type="text" disabled placeholder="disabled" />
+    </label>
+
+    <h3>large.css</h3>
+    <input class="nu_input _l" type="text" placeholder="large.css" />
+    <label class="nu_input _l">
+      <input type="text" placeholder="large.css" />
+    </label>
+    <h3>small.css</h3>
+    <input class="nu_input _s" type="text" placeholder="small.css" />
+    <label class="nu_input _s">
+      <input type="text" placeholder="small.css" />
+    </label>
+
+    <h3>capsule.css</h3>
+    <input class="nu_input _capsule" type="text" placeholder="capsule.css" />
+    <label class="nu_input _capsule">
+      <input type="text" placeholder="capsule.css" />
+    </label>
+
+    <h3>line.css</h3>
+    <input class="nu_input _line" type="text" placeholder="line.css" />
+    <label class="nu_input _line">
+      <input type="text" placeholder="line.css" />
+    </label>
+    <h3>block.css</h3>
+    <input class="nu_input _block" type="text" placeholder="block.css" />
+    <label class="nu_input _block">
+      <input type="text" placeholder="block.css" />
+    </label>
+  </body>
+</html>

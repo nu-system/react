@@ -2,8 +2,8 @@
   "_data": {
     "version": "1.0.0"
   },
-  "component": {
-    "_description": "添加组件",
+  "react": {
+    "_description": "添加React组件",
     "_ask": [
       {
         "message": "请输入组件名称:",
@@ -12,8 +12,23 @@
     ],
     "template": [
       {
-        "from": "e2-tpl/ComponentName",
-        "to": "packages/<%= e2.ttc(e2.componentName) %>"
+        "from": "e2-tpl/React",
+        "to": "packages/React<%= e2.ttc(e2.componentName) %>"
+      }
+    ]
+  },
+  "css": {
+    "_description": "添加css组件",
+    "_ask": [
+      {
+        "message": "请输入组件名称:",
+        "name": "componentName"
+      }
+    ],
+    "template": [
+      {
+        "from": "e2-tpl/CSS",
+        "to": "packages/CSS<%= e2.ttc(e2.componentName) %>"
       }
     ]
   }

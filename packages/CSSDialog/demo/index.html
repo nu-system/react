@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/index.css" />
+    <link rel="stylesheet" href="../lib/skins/top.css" />
+    <link rel="stylesheet" href="../lib/skins/right.css" />
+    <link rel="stylesheet" href="../lib/skins/bottom.css" />
+    <link rel="stylesheet" href="../lib/skins/left.css" />
+    <link rel="stylesheet" href="../lib/skins/middle.css" />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+      }
+      .text-area {
+        padding: 5em 1em;
+        text-align: center;
+      }
+      .btn-show-dialog {
+        display: inline-block;
+        font-size: 100%;
+        padding: 0.5em 1em;
+        background-color: #4c5fe2;
+        color: #fff;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+        margin: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" onclick="apiModal.show('_top')">
+      show top dialog
+    </button>
+    <button type="button" onclick="apiModal.show('_right')">
+      show right dialog
+    </button>
+    <button type="button" onclick="apiModal.show('_bottom')">
+      show bottom dialog
+    </button>
+    <button type="button" onclick="apiModal.show('_left')">
+      show left dialog
+    </button>
+    <button type="button" onclick="apiModal.show('_middle')">
+      show middle dialog
+    </button>
+
+    <template id="tplDialog">
+      <div role="dialog" tabindex="-1" id="dialog" class="nu_modal">
+        <button
+          id="mask"
+          title="mask"
+          class="nu_mask"
+          aria-label="mask"
+          onclick="apiModal.close()"
+        ></button>
+        <section class="nu_dialog">
+          <button
+            id="close"
+            title="close"
+            aria-label="close"
+            class="nu_dialog_close"
+            onclick="apiModal.close()"
+          >
+            &times;
+          </button>
+          <h3>title of dialog</h3>
+          <p>
+            content of dialog
+          </p>
+        </section>
+      </div>
+    </template>
+
+    <script>
+      var apiModal = {
+        show: function (position) {
+          var domDialog = (function () {
+            var textDialog = document.getElementById('tplDialog').innerHTML;
+            var objE = document.createElement('div');
+            objE.innerHTML = textDialog;
+            return objE.childNodes[1];
+          })();
+          this.domDialog = domDialog;
+          domDialog.setAttribute('class', 'nu_modal ' + position);
+          document.body.append(domDialog);
+          setTimeout(() => {
+            domDialog.setAttribute('open', true);
+          }, 16);
+        },
+        close: function () {
+          var _it = this;
+          _it.domDialog.removeAttribute('open');
+          setTimeout(function () {
+            _it.domDialog.remove();
+          }, 300);
+        },
+      };
+    </script>
+  </body>
+</html>
