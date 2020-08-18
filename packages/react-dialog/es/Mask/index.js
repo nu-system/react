@@ -6,17 +6,10 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import PropTypes from 'prop-types';
-/**
- * 遮罩
- * @param className
- * @param otherProps
- * @returns {JSX.Element}
- * @constructor
- */
 
 var NuMask = function NuMask(_ref) {
   var _ref$className = _ref.className,
-      className = _ref$className === void 0 ? '' : _ref$className,
+      className = _ref$className === void 0 ? 'nu_mask' : _ref$className,
       _ref$onAfterClick = _ref.onAfterClick,
       onAfterClick = _ref$onAfterClick === void 0 ? function () {} : _ref$onAfterClick,
       _ref$onClick = _ref.onClick,
@@ -34,18 +27,24 @@ var NuMask = function NuMask(_ref) {
   };
 
   return /*#__PURE__*/React.createElement("button", _extends({
+    className: className,
     type: "button",
     title: title,
-    onClick: handleClick,
     "aria-label": title,
-    className: "nu_mask ".concat(className)
+    onClick: handleClick
   }, otherProps));
 };
 
 NuMask.propTypes = {
+  className: PropTypes.string,
   onAfterClick: PropTypes.func,
   onClick: PropTypes.func,
-  title: PropTypes.string,
-  className: PropTypes.string
+  title: PropTypes.string
+};
+NuMask.defaultProps = {
+  className: 'nu_mask',
+  onAfterClick: function onAfterClick() {},
+  onClick: function onClick() {},
+  title: 'Mask'
 };
 export default NuMask;

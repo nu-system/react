@@ -28,7 +28,7 @@ import NuPortal from '../Portal';
  */
 const NuModal = React.forwardRef(function NuModal(
   {
-    className = '',
+    className = 'nu_modal',
     children = null,
     open = false,
     lockScroll = true,
@@ -109,7 +109,7 @@ const NuModal = React.forwardRef(function NuModal(
           open={show}
           tabIndex="0"
           role="dialog"
-          className={`nu_modal ${className}`}
+          className={className}
           {...otherProps}
         >
           {/* eslint-disable-next-line no-nested-ternary */}

@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-/**
- * 遮罩
- * @param className
- * @param otherProps
- * @returns {JSX.Element}
- * @constructor
- */
+
 const NuMask = ({
-  // eslint-disable-next-line react/prop-types
-  className = '',
+  className = 'nu_mask',
   onAfterClick = () => {},
   onClick = () => {},
   title = 'Mask',
@@ -27,21 +20,26 @@ const NuMask = ({
   };
   return (
     <button
+      className={className}
       type="button"
       title={title}
-      onClick={handleClick}
       aria-label={title}
-      className={`nu_mask ${className}`}
+      onClick={handleClick}
       {...otherProps}
     />
   );
 };
-
 NuMask.propTypes = {
+  className: PropTypes.string,
   onAfterClick: PropTypes.func,
   onClick: PropTypes.func,
   title: PropTypes.string,
-  className: PropTypes.string,
 };
 
+NuMask.defaultProps = {
+  className: 'nu_mask',
+  onAfterClick: () => {},
+  onClick: () => {},
+  title: 'Mask',
+};
 export default NuMask;
