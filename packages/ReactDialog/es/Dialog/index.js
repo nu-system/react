@@ -8,14 +8,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 var Dialog = function Dialog(_ref) {
-  var _ref$children = _ref.children,
-      children = _ref$children === void 0 ? null : _ref$children,
-      otherProps = _objectWithoutProperties(_ref, ["children"]);
+  var _ref$className = _ref.className,
+      className = _ref$className === void 0 ? 'nu_dialog' : _ref$className,
+      _ref$role = _ref.role,
+      role = _ref$role === void 0 ? 'document' : _ref$role,
+      otherProps = _objectWithoutProperties(_ref, ["className", "role"]);
 
   return /*#__PURE__*/React.createElement("section", _extends({
-    role: "document",
-    className: "nu_dialog"
-  }, otherProps), children);
+    role: role,
+    className: className
+  }, otherProps));
 };
 
 Dialog.propTypes = {
@@ -27,6 +29,11 @@ Dialog.propTypes = {
   /**
    * children
    */
-  children: PropTypes.node
+  children: PropTypes.node,
+
+  /**
+   * role of dialog
+   */
+  role: PropTypes.string
 };
 export default Dialog;

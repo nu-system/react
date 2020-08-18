@@ -1,2 +1,2 @@
 ._right .nu_dialog{position:absolute;right:0;top:0;height:100%;width:80%;max-width:400px;bottom:0}
-._right .nu_dialog{transform:translate(50px,0)}
+._right .nu_dialog{-webkit-transform:translate(50px,0);transform:translate(50px,0)}

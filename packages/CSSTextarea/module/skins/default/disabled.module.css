@@ -1,8 +1,2 @@
-.nu_textarea:disabled,
-.nu_textarea > textarea:disabled {
-  background-color: #eee;
-}
-.nu_textarea:disabled:hover,
-.nu_textarea > textarea:disabled:hover {
-  border-color: #ccc;
-}
+.nu_textarea:disabled,.nu_textarea>textarea:disabled{background-color:#eee}
+.nu_textarea:disabled:hover,.nu_textarea>textarea:disabled:hover{border-color:#ccc}

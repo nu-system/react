@@ -1,12 +1,3 @@
-.nu_textarea > textarea[readonly],
-.nu_textarea[readonly] {
-  background-color: #fff;
-}
-.nu_textarea > textarea[readonly]:focus,
-.nu_textarea[readonly]:focus {
-  border-color: #ddd;
-}
-.nu_textarea > textarea[readonly]:hover,
-.nu_textarea[readonly]:hover {
-  border-color: #ccc;
-}
+.nu_textarea>textarea[readonly],.nu_textarea[readonly]{background-color:#fff}
+.nu_textarea>textarea[readonly]:focus,.nu_textarea[readonly]:focus{border-color:#ddd}
+.nu_textarea>textarea[readonly]:hover,.nu_textarea[readonly]:hover{border-color:#ccc}

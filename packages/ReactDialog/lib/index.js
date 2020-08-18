@@ -15,6 +15,12 @@ Object.defineProperty(exports, "NuMask", {
     return _Mask.default;
   }
 });
+Object.defineProperty(exports, "NuDialog", {
+  enumerable: true,
+  get: function get() {
+    return _Dialog.default;
+  }
+});
 Object.defineProperty(exports, "NuClose", {
   enumerable: true,
   get: function get() {
@@ -27,7 +33,6 @@ Object.defineProperty(exports, "NuPortal", {
     return _Portal.default;
   }
 });
-exports.default = void 0;
 
 var _Modal = _interopRequireDefault(require("./Modal"));
 
@@ -40,11 +45,3 @@ var _Close = _interopRequireDefault(require("./Close"));
 var _Portal = _interopRequireDefault(require("./Portal"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Author: ziven27
- * Date: 8/15/2020
- * Desc: 弹窗组件
- */
-var _default = _Dialog.default;
-exports.default = _default;

@@ -18,14 +18,16 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var Dialog = function Dialog(_ref) {
-  var _ref$children = _ref.children,
-      children = _ref$children === void 0 ? null : _ref$children,
-      otherProps = _objectWithoutProperties(_ref, ["children"]);
+  var _ref$className = _ref.className,
+      className = _ref$className === void 0 ? 'nu_dialog' : _ref$className,
+      _ref$role = _ref.role,
+      role = _ref$role === void 0 ? 'document' : _ref$role,
+      otherProps = _objectWithoutProperties(_ref, ["className", "role"]);
 
   return /*#__PURE__*/_react.default.createElement("section", _extends({
-    role: "document",
-    className: "nu_dialog"
-  }, otherProps), children);
+    role: role,
+    className: className
+  }, otherProps));
 };
 
 Dialog.propTypes = {
@@ -37,7 +39,12 @@ Dialog.propTypes = {
   /**
    * children
    */
-  children: _propTypes.default.node
+  children: _propTypes.default.node,
+
+  /**
+   * role of dialog
+   */
+  role: _propTypes.default.string
 };
 var _default = Dialog;
 exports.default = _default;

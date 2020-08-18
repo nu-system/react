@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Dialog = ({ children = null, ...otherProps }) => (
-  <section role="document" className="nu_dialog" {...otherProps}>
-    {children}
-  </section>
-);
+const Dialog = ({
+  className = 'nu_dialog',
+  role = 'document',
+  ...otherProps
+}) => <section role={role} className={className} {...otherProps} />;
 
 Dialog.propTypes = {
   /**
@@ -16,6 +16,10 @@ Dialog.propTypes = {
    * children
    */
   children: PropTypes.node,
+  /**
+   * role of dialog
+   */
+  role: PropTypes.string,
 };
 
 export default Dialog;

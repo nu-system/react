@@ -10,8 +10,6 @@
 [git-url]: https://github.com/nu-system/react-dialog
 [git-badge]: https://img.shields.io/github/stars/nu-system/react-dialog.svg?style=social
 
-[English](../README.md) | 简体中文
-
 一个兼顾无障碍范围，易用性，且没有 UI 依赖的 React 对话框组件.
 
 `@_nu/react-dialog` 本身不会输出任何样式，所有 demo 样式均来自于[@\_nu/css-dialog](https://nu-system.github.io/css/dialog/)。
@@ -38,7 +36,7 @@ components/
 
 ```JSX
 import React from 'react';
-import NuDialog, { NuMask, NuModal, NuClose } from '../../../src/index';
+import NuDialog, { NuMask, NuModal, NuClose } from '@_nu/react-dialog';
 import '@_nu/css-dialog';
 import '@_nu/css-dialog/lib/skins/middle.css';
 import '@_nu/css-dialog/lib/skins/top.css';
@@ -96,87 +94,26 @@ export default App;
 </dialog>
 ```
 
-## Api
+## 子组件
 
-```JSX
-Dialog.defaultProps={
-  className = "",
-  children = null,
-  open = false,
-  active = true,
-  lockScroll = true,
-  maskTitle = "Mask",
-  removeTime = 200,
-  disabledPortal = false,
-  disableEsc = false,
-  closeTitle = "Close",
-  closeChildren = <Fragment>&times;</Fragment>,
-  onClose = () => {},
-  onClickMask = () => {}
-};
+| props    | 功能              |                               API |
+| :------- | ----------------- | --------------------------------: |
+| `Modal`  | 弹窗组件          | [点击查看](./src/Modal/README.md) |
+| `Portal` | 已内置在 Modal 中 | [点击查看](./src/Portal/index.js) |
+| `Mask`   | 蒙层组件          |   [点击查看](./src/Mask/index.js) |
+| `Dialog` | 内容容器组件      | [点击查看](./src/Dialog/index.js) |
+| `Close`  | 关闭按钮          |  [点击查看](./src/Close/index.js) |
 
-Dialog.propTypes = {
-  /**
-   * css class
-   */
-  className: PropTypes.string,
-  /**
-   * Dialog children, usually the included sub-components.
-   */
-  children: PropTypes.node,
-  /**
-   * if `> 0`, hide dialog and remove dialog after removeTime
-   * else if `0`, remove dialog immediately
-   * else, keep exit after hide
-   */
-  removeTime: PropTypes.number,
-  /**
-   * If `true`, the dialog go through the enter, entring, enterd.
-   * If `false`, the dialog go through the exitring, exitred.
-   */
-  open: PropTypes.bool,
-  /**
-   * If `true`, the dialog can focusable
-   * If `false`, the dialog blur
-   */
-  active: PropTypes.bool,
-  /**
-   * Callback fired when dialog close.
-   */
-  onClose: PropTypes.func,
-  /**
-   * Callback fired when the `Mask` is clicked.
-   * if return `false`, no longer trigger onclick
-   * else trigger the onClose
-   */
-  onClickMask: PropTypes.func,
-  /**
-   * If `true`, when dialog scroll into bottom the body will scroll
-   */
-  lockScroll: PropTypes.bool,
-  /**
-   * If `true`, the dialog will render where it is defined
-   */
-  disabledPortal: PropTypes.bool,
-  /**
-   * If `true`, the dialog will not close when click esc
-   */
-  disableEsc: PropTypes.bool,
-  /**
-   * title of the `Close`.
-   * If empty string, the `Close` do not render
-   */
-  closeTitle: PropTypes.string,
-  /**
-   * title of the mask element.
-   * If empty string, the mask do not render
-   */
-  maskTitle: PropTypes.string,
-  /**
-   * Close children
-   */
-  closeChildren: PropTypes.node
-};
+```jsx
+// @_nu/react-dialog
+import NuModal from './Modal';
+import NuMask from './Mask';
+import NuDialog from './Dialog';
+import NuClose from './Close';
+import NuPortal from './Portal';
+
+export default NuDialog;
+export { NuMask, NuModal, NuClose, NuPortal };
 ```
 
 ### Transition
@@ -197,15 +134,14 @@ Dialog.propTypes = {
 ._left .nu_dialog {
   transform: translate(-50px, 0);
 }
+
+/* 默认终点状态 */
+.nu_modal[open] .nu_dialog{
+    transform: translate(0, 0);
+}
 ```
 
 你只需要定义 `.nu_dialog` 的起点状态即可。
-
-## 贡献与开发
-
-这个项目是与贡献者行为准则一起发布的。参与本项目，代表您同意遵守其条款。
-
-运行 demo `npm start`.
 
 ## 技术方案
 

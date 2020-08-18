@@ -41,6 +41,7 @@ NuMask.propTypes = {
   onAfterClick: PropTypes.func,
   onClick: PropTypes.func,
   title: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default NuMask;

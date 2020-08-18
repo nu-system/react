@@ -1,80 +1,4 @@
-# @\_nu/react-modal
-
-[![npm package][npm-badge]][npm-url]
-[![npm downloads][npm-downloads]][npm-url]
-[![github][git-badge]][git-url]
-
-[npm-badge]: https://img.shields.io/npm/v/@_nu/react-modal.svg
-[npm-url]: https://www.npmjs.org/package/@_nu/react-modal
-[npm-downloads]: https://img.shields.io/npm/dw/@_nu/react-modal
-[git-url]: https://github.com/nu-system/react
-[git-badge]: https://img.shields.io/github/stars/nu-system/react.svg?style=social
-
-一个兼顾无障碍范围，易用性，且没有 UI 依赖的 React 模态框组件.
-
-`@_nu/react-modal` 本身不会输出任何样式，所有 demo 样式均来自于[@\_nu/css-modal](https://nu-system.github.io/css/modal/)。
-
-## 安装
-
-```
-$ yarn add @_nu/react-modal
-```
-
-**注**：会自动引入依赖 [@\_nu/css-modal](https://nu-system.github.io/css/modal/)。
-
-## 二次封装
-
-在你的项目组件库文件夹中创建一个新的 Modal 组件.
-
-```
-src/components/
-   └── Modal/
-       ├── index.js
-       └── style.css
-```
-
-```JSX
-// components/Modal/index.js
-import React from 'react';
-import NuModal, { NuMask } from '../../../src';
-import '@_nu/css-modal';
-
-// 自定义你的模态框样式
-import "./index.css";
-
-// 设置Mask 组件
-NuModal.defaultProps.Mask = <NuMask />;
-
-export default NuModal;
-```
-
-## 使用
-
-```JSX
-import React, { useState } from "react";
-import Modal from "./components/Modal";
-
-function Demo() {
-  const [open, setOpen] = useState(false);
-
-  const show = () => setOpen(true);
-  const close = () => setOpen(false);
-
-  return (
-    <div>
-      <button type="button" onClick={show}>
-        open
-      </button>
-      <Modal open={open} onClose={close}>
-        <button type="button" onClick={close}>
-          关闭
-        </button>
-      </Modal>
-    </div>
-  );
-}
-export default App;
-```
+# @\_nu/react-dialog Modal 组件
 
 ## Dom
 
@@ -88,7 +12,6 @@ export default App;
 ## Api
 
 ```JSX
-
 NuModal.defaultProps={
     className : '',
     children : null,

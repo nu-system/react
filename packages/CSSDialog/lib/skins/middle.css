@@ -1,4 +1,4 @@
-.nu_modal._middle{box-sizing:border-box;padding-top:16px;padding-bottom:16px;text-align:center;font-size:0}
+.nu_modal._middle{-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:16px;padding-bottom:16px;text-align:center;font-size:0}
 .nu_modal._middle:after{content:'';height:100%;display:inline-block;width:0;vertical-align:middle;margin-left:-1px}
 ._middle .nu_dialog{width:90%;max-width:600px;display:inline-block;vertical-align:middle;text-align:left;font-size:16px}
-._middle .nu_dialog{transform:translate(0,50px)}
+._middle .nu_dialog{-webkit-transform:translate(0,50px);transform:translate(0,50px)}

@@ -1,4 +1,1 @@
-.nu_textarea._error > textarea,
-textarea.nu_textarea._error {
-  border-color: #eb4646 !important;
-}
+.nu_textarea._error>textarea,textarea.nu_textarea._error{border-color:#eb4646!important}

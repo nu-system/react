@@ -1,4 +1,1 @@
-.nu_textarea > textarea:focus,
-textarea.nu_textarea:focus {
-  border-color: #007bff;
-}
+.nu_textarea>textarea:focus,textarea.nu_textarea:focus{border-color:#007bff}
