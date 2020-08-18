@@ -3,38 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.4](https://github.com/nu-system/css-input/compare/@_nu/css-input@1.0.3...@_nu/css-input@1.0.4) (2020-08-16)
-
+## 1.0.5 (2020-08-18)
 
 ### Bug Fixes
 
-* update ([c05b20c](https://github.com/nu-system/css-input/commit/c05b20c3fd94f0884015cc0589f7c44abc218901))
+- add csstextarea ([4b822a1](https://github.com/nu-system/react/commit/4b822a1b82ec2e2ca6bdfcdd473c978653573acc))
+- 将 css 注入到 react 中 ([a3e4d6a](https://github.com/nu-system/react/commit/a3e4d6a22d345e02f2580b53212f6c063176d8b1))
 
+## [1.0.4](https://github.com/nu-system/css-input/compare/@_nu/css-input@1.0.3...@_nu/css-input@1.0.4) (2020-08-16)
 
+### Bug Fixes
 
-
+- update ([c05b20c](https://github.com/nu-system/css-input/commit/c05b20c3fd94f0884015cc0589f7c44abc218901))
 
 ## [1.0.3](https://github.com/nu-system/css-input/compare/@_nu/css-input@1.0.2...@_nu/css-input@1.0.3) (2020-08-16)
 
-
 ### Bug Fixes
 
-* 发布 ([22014cc](https://github.com/nu-system/css-input/commit/22014cc0d056833c00f02db9409b19c508ca88f7))
-
-
-
-
+- 发布 ([22014cc](https://github.com/nu-system/css-input/commit/22014cc0d056833c00f02db9409b19c508ca88f7))
 
 ## [1.0.2](https://github.com/nu-system/css-input/compare/@_nu/css-input@1.0.1...@_nu/css-input@1.0.2) (2020-08-16)
 
-
 ### Bug Fixes
 
-* 修改构建工具 ([3930fa5](https://github.com/nu-system/css-input/commit/3930fa508af689207d8d591aab09054b4023948e))
-
-
-
-
+- 修改构建工具 ([3930fa5](https://github.com/nu-system/css-input/commit/3930fa508af689207d8d591aab09054b4023948e))
 
 ## 1.0.1 (2020-07-04)
 
