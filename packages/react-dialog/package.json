@@ -1,6 +1,6 @@
 {
   "name": "@_nu/react-dialog",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A fully accessible、flexible、unstyled React dialog component",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -44,6 +44,6 @@
   ],
   "gitHead": "6a4ea98e33a28bc87263e316d1d00f92d5744452",
   "devDependencies": {
-    "@_nu/css-dialog": "^0.1.6"
+    "@_nu/css-dialog": "^0.1.7"
   }
 }
