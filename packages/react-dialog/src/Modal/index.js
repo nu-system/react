@@ -20,7 +20,6 @@ import NuPortal from '../Portal';
  * @param disableEsc
  * @param onClose
  * @param Component
- * @param Mask
  * @param otherProps
  * @param ref
  * @returns {JSX.Element|null}
@@ -37,7 +36,6 @@ const NuModal = React.forwardRef(function NuModal(
     disableEsc = false,
     onClose = () => {},
     Component = 'dialog',
-    Mask = null,
     ...otherProps
   },
   ref,
@@ -112,14 +110,6 @@ const NuModal = React.forwardRef(function NuModal(
           className={className}
           {...otherProps}
         >
-          {/* eslint-disable-next-line no-nested-ternary */}
-          {typeof Mask === 'function' ? (
-            <Mask onAfterClick={onClose} />
-          ) : Mask ? (
-            React.cloneElement(Mask, {
-              onAfterClick: onClose,
-            })
-          ) : null}
           {children}
         </Component>
       </FocusTrap>
@@ -174,10 +164,6 @@ NuModal.propTypes = {
    * Components of modal
    */
   Component: PropTypes.node,
-  /**
-   * Components of Mask
-   */
-  Mask: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
 export default NuModal;

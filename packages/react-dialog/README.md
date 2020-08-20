@@ -36,7 +36,7 @@ components/
 
 ```JSX
 import React from 'react';
-import NuDialog, { NuMask, NuModal, NuClose } from '@_nu/react-dialog';
+import { NuDialog, NuMask, NuModal, NuClose } from '@_nu/react-dialog';
 import '@_nu/css-dialog';
 import '@_nu/css-dialog/lib/skins/middle.css';
 import '@_nu/css-dialog/lib/skins/top.css';
@@ -45,12 +45,13 @@ import '@_nu/css-dialog/lib/skins/bottom.css';
 import '@_nu/css-dialog/lib/skins/right.css';
 import './style.css';
 
-function Dialog({ children, ...otherProps }) {
+function Dialog({ children, onClose, ...otherProps }) {
   return (
-    <NuModal Mask={NuMask} {...otherProps}>
+    <NuModal onClose={onClose} {...otherProps}>
+      <NuMask onClick={onClose} />
       <NuDialog>
         {children}
-        <NuClose onClick={otherProps.onClose} />
+        <NuClose onClick={onClose} />
       </NuDialog>
     </NuModal>
   );

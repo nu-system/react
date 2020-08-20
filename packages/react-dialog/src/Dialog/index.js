@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Dialog = ({
+const NuDialog = ({
   className = 'nu_dialog',
   role = 'document',
   ...otherProps
 }) => <section role={role} className={className} {...otherProps} />;
 
-Dialog.propTypes = {
+NuDialog.propTypes = {
   /**
    * css class
    */
@@ -22,4 +22,4 @@ Dialog.propTypes = {
   role: PropTypes.string,
 };
 
-export default Dialog;
+export default NuDialog;

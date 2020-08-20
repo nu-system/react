@@ -17,7 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Dialog = function Dialog(_ref) {
+var NuDialog = function NuDialog(_ref) {
   var _ref$className = _ref.className,
       className = _ref$className === void 0 ? 'nu_dialog' : _ref$className,
       _ref$role = _ref.role,
@@ -30,7 +30,7 @@ var Dialog = function Dialog(_ref) {
   }, otherProps));
 };
 
-Dialog.propTypes = {
+NuDialog.propTypes = {
   /**
    * css class
    */
@@ -46,5 +46,5 @@ Dialog.propTypes = {
    */
   role: _propTypes.default.string
 };
-var _default = Dialog;
+var _default = NuDialog;
 exports.default = _default;

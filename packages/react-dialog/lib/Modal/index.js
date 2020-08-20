@@ -52,7 +52,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
  * @param disableEsc
  * @param onClose
  * @param Component
- * @param Mask
  * @param otherProps
  * @param ref
  * @returns {JSX.Element|null}
@@ -77,9 +76,7 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
       onClose = _ref$onClose === void 0 ? function () {} : _ref$onClose,
       _ref$Component = _ref.Component,
       Component = _ref$Component === void 0 ? 'dialog' : _ref$Component,
-      _ref$Mask = _ref.Mask,
-      Mask = _ref$Mask === void 0 ? null : _ref$Mask,
-      otherProps = _objectWithoutProperties(_ref, ["className", "children", "open", "lockScroll", "removeTime", "root", "disableEsc", "onClose", "Component", "Mask"]);
+      otherProps = _objectWithoutProperties(_ref, ["className", "children", "open", "lockScroll", "removeTime", "root", "disableEsc", "onClose", "Component"]);
 
   // is render in dom
   var _useState = (0, _react.useState)(false),
@@ -154,11 +151,7 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
     tabIndex: "0",
     role: "dialog",
     className: className
-  }, otherProps), typeof Mask === 'function' ? /*#__PURE__*/_react.default.createElement(Mask, {
-    onAfterClick: onClose
-  }) : Mask ? _react.default.cloneElement(Mask, {
-    onAfterClick: onClose
-  }) : null, children)));
+  }, otherProps), children)));
 });
 
 NuModal.defaultProps = {};
@@ -210,12 +203,7 @@ NuModal.propTypes = {
   /**
    * Components of modal
    */
-  Component: _propTypes.default.node,
-
-  /**
-   * Components of Mask
-   */
-  Mask: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.func])
+  Component: _propTypes.default.node
 };
 var _default = NuModal;
 exports.default = _default;

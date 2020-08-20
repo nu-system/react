@@ -10,3 +10,5 @@ src/serviceWorker.js
 src/setupTests.js
 gulpfile.js
 __tests__
+demo/
+*.d.ts
