@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.1.7...@_nu/react-dialog@1.1.8) (2020-08-20)
+
+### Bug Fixes
+
+- 修改 numodal ([2534e47](https://github.com/nu-system/react/commit/2534e47bb148482460fc1315bba3690531010e2d))
+
 ## [1.1.7](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.1.6...@_nu/react-dialog@1.1.7) (2020-08-18)
 
 ### Bug Fixes
