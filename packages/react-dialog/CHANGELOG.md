@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.0...@_nu/react-dialog@1.2.1) (2020-11-03)
+
+### Bug Fixes
+
+- 修改 focustrap ([a9d5186](https://github.com/nu-system/react/commit/a9d51863fc6946b7a666202997789ad4b482a421))
+
 # [1.2.0](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.1.8...@_nu/react-dialog@1.2.0) (2020-11-03)
 
 ### Features
