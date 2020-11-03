@@ -141,7 +141,7 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
   return /*#__PURE__*/_react.default.createElement(_Portal.default, {
     root: root
   }, /*#__PURE__*/_react.default.createElement(_focusTrapReact.default, {
-    active: open && show,
+    active: show,
     focusTrapOptions: {
       onDeactivate: onClose,
       escapeDeactivates: !disableEsc,

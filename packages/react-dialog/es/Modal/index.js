@@ -240,7 +240,7 @@ var NuModal = React.forwardRef(function NuModal(_ref, ref) {
     /*#__PURE__*/ React.createElement(
       FocusTrap,
       {
-        active: open && show,
+        active: show,
         focusTrapOptions: {
           onDeactivate: onClose,
           escapeDeactivates: !disableEsc,

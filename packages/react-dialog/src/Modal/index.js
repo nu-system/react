@@ -96,7 +96,7 @@ const NuModal = React.forwardRef(function NuModal(
   return (
     <NuPortal root={root}>
       <FocusTrap
-        active={open && show}
+        active={show}
         focusTrapOptions={{
           onDeactivate: onClose,
           escapeDeactivates: !disableEsc,
