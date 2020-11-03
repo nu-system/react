@@ -23,4 +23,5 @@ $ yarn br:*  // build-react:Componentname
 $ yarn bc:*  // build-css:Componentname 
 $ yarn sr:*  // start-react:Componentname 
 $ yarn sc:*  // start-css:Componentname 
+$ lerna publish // 发布代码
 ```
