@@ -9,6 +9,7 @@ export interface ComponentProps {
   open?: boolean;
   lockScroll?: boolean;
   disableEsc?: boolean;
+  forceRender?: boolean;
   root?: string | false | HTMLElement;
 }
 

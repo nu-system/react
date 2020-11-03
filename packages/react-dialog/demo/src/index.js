@@ -37,6 +37,8 @@ function Demo() {
         className={`_${position}`}
         aria-describedby="alert-dialog-description"
         onClose={() => setOpen(false)}
+        removeTime={null}
+        forceRender
       >
         <h3 id="alert-dialog-title">Use Google's location service?</h3>
         <p id="alert-dialog-description">

@@ -36,12 +36,13 @@ const NuModal = React.forwardRef(function NuModal(
     disableEsc = false,
     onClose = () => {},
     Component = 'dialog',
+    forceRender = false,
     ...otherProps
   },
   ref,
 ) {
   // is render in dom
-  const [exit, setExit] = useState(false);
+  const [exit, setExit] = useState(forceRender);
 
   // is visible
   const [show, setShow] = useState(null);
@@ -164,6 +165,10 @@ NuModal.propTypes = {
    * Components of modal
    */
   Component: PropTypes.node,
+  /**
+   * If `true`, the dialog will render when mount
+   */
+  forceRender: PropTypes.bool,
 };
 
 export default NuModal;

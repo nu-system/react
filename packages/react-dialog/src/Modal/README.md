@@ -74,6 +74,10 @@ NuModal.propTypes = {
    * Components of Mask
    */
   Mask: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  /**
+   * If `true`, the dialog will render when mount
+   */
+  forceRender: PropTypes.bool,
 };
 ```
 
