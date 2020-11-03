@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nu-system/react/compare/@_nu/css-acss@0.3.11...@_nu/css-acss@0.4.0) (2020-11-03)
+
+### Features
+
+- 为弹窗添加 force render ([9176d2a](https://github.com/nu-system/react/commit/9176d2ad29986c6296b8ae35805c21978744736e))
+
 ## [0.3.11](https://github.com/nu-system/react/compare/@_nu/css-acss@0.3.10...@_nu/css-acss@0.3.11) (2020-08-18)
 
 ### Bug Fixes
