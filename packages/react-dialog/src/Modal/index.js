@@ -71,7 +71,7 @@ const NuModal = React.forwardRef(function NuModal(
           () => {
             setActive(true);
           },
-          activeTime > 16 ? active : 16,
+          activeTime > 16 ? activeTime : 16,
         );
       }, 16);
     } else {

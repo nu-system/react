@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import getElementById from './getElementById';
 
 function NuPortal({ root = document ? document.body : null, children }) {
-  if (!root || !document) {
+  if (!root || typeof document === 'undefined') {
     return children;
   }
 

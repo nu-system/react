@@ -5,10 +5,10 @@ import getElementById from './getElementById';
 
 function NuPortal(_ref) {
   var _ref$root = _ref.root,
-      root = _ref$root === void 0 ? document ? document.body : null : _ref$root,
-      children = _ref.children;
+    root = _ref$root === void 0 ? (document ? document.body : null) : _ref$root,
+    children = _ref.children;
 
-  if (!root || !document) {
+  if (!root || typeof document === 'undefined') {
     return children;
   }
 
@@ -17,7 +17,11 @@ function NuPortal(_ref) {
 }
 
 NuPortal.propTypes = {
-  root: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.oneOf([false])]),
-  children: PropTypes.node
+  root: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.oneOf([false]),
+  ]),
+  children: PropTypes.node,
 };
 export default NuPortal;

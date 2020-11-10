@@ -119,7 +119,7 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
 
         inTimer = setTimeout(function () {
           setActive(true);
-        }, activeTime > 16 ? active : 16);
+        }, activeTime > 16 ? activeTime : 16);
       }, 16);
     } else {
       setActive(false);

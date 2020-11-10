@@ -212,7 +212,7 @@ var NuModal = React.forwardRef(function NuModal(_ref, ref) {
             function () {
               setActive(true);
             },
-            activeTime > 16 ? active : 16,
+            activeTime > 16 ? activeTime : 16,
           );
         }, 16);
       } else {

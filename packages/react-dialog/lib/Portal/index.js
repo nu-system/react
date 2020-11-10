@@ -19,7 +19,7 @@ function NuPortal(_ref) {
       root = _ref$root === void 0 ? document ? document.body : null : _ref$root,
       children = _ref.children;
 
-  if (!root || !document) {
+  if (!root || typeof document === 'undefined') {
     return children;
   }
 
