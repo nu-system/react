@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.1...@_nu/react-dialog@1.2.2) (2020-11-10)
+
+### Bug Fixes
+
+- 修改 dialog force render 不生效的问题 ([d6d88fc](https://github.com/nu-system/react/commit/d6d88fc228110dbe25b75f926be54f61cb662605))
+
 ## [1.2.1](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.0...@_nu/react-dialog@1.2.1) (2020-11-03)
 
 ### Bug Fixes
