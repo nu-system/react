@@ -202,11 +202,11 @@ var NuModal = React.forwardRef(function NuModal(_ref, ref) {
         if (removeTime > 0) {
           // hide dialog and remove dialog after removeTime
           removeTimer = setTimeout(function () {
-            setExit(false);
+            !forceRender && setExit(false);
           }, removeTime);
         } else if (removeTime === 0) {
           // remove dialog immediately
-          setExit(false);
+          !forceRender && setExit(false);
         } else {
           // keep exit after hide
         }
@@ -217,7 +217,7 @@ var NuModal = React.forwardRef(function NuModal(_ref, ref) {
         removeTimer && clearTimeout(removeTimer);
       };
     },
-    [open],
+    [open, removeTime, forceRender],
   );
   /**
    * if `true` lock the scroll when open
