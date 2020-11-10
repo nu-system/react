@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.2...@_nu/react-dialog@1.2.3) (2020-11-10)
+
+### Bug Fixes
+
+- fix focus trap ([e74cebb](https://github.com/nu-system/react/commit/e74cebb557452bfa6488100e8b18a8ec392e8f51))
+
 ## [1.2.2](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.1...@_nu/react-dialog@1.2.2) (2020-11-10)
 
 ### Bug Fixes
