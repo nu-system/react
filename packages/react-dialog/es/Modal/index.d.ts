@@ -5,6 +5,7 @@ export interface ComponentProps {
   children?: React.ReactNode;
   className?: String;
   onClose?: () => {};
+  activeTime?: number;
   removeTime?: number;
   open?: boolean;
   lockScroll?: boolean;

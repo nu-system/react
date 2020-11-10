@@ -31,6 +31,7 @@ const NuModal = React.forwardRef(function NuModal(
     children = null,
     open = false,
     lockScroll = true,
+    activeTime = 16,
     removeTime = 200,
     root = 'nuModal',
     disableEsc = false,
@@ -47,19 +48,34 @@ const NuModal = React.forwardRef(function NuModal(
   // is visible
   const [show, setShow] = useState(null);
 
+  // is active
+  const [active, setActive] = useState(false);
+
   useEffect(() => {
     let removeTimer;
+    let inTimer;
 
     if (open) {
       setExit(true);
+
       /**
        *  After exit and add attr `open` to dialog
        *  Fot the css transition
        */
       setTimeout(() => {
         setShow(true);
+        /**
+         *  After show active focus trap
+         */
+        inTimer = setTimeout(
+          () => {
+            setActive(true);
+          },
+          activeTime > 16 ? active : 16,
+        );
       }, 16);
     } else {
+      setActive(false);
       setShow(null);
 
       // remove dialog by removeTime
@@ -78,8 +94,9 @@ const NuModal = React.forwardRef(function NuModal(
     return () => {
       // eslint-disable-next-line no-unused-expressions
       removeTimer && clearTimeout(removeTimer);
+      inTimer && clearTimeout(inTimer);
     };
-  }, [open, removeTime, forceRender]);
+  }, [open, removeTime, forceRender, activeTime]);
 
   /**
    * if `true` lock the scroll when open
@@ -96,7 +113,7 @@ const NuModal = React.forwardRef(function NuModal(
   return (
     <NuPortal root={root}>
       <FocusTrap
-        active={show}
+        active={active}
         focusTrapOptions={{
           onDeactivate: onClose,
           escapeDeactivates: !disableEsc,
@@ -129,6 +146,11 @@ NuModal.propTypes = {
    * Dialog children, usually the included sub-components.
    */
   children: PropTypes.node,
+  /**
+   * if `> 16`, the focus trap active after removeTime
+   * else `16`, the focus trap active after 16
+   */
+  activeTime: PropTypes.number,
   /**
    * if `> 0`, hide dialog and remove dialog after removeTime
    * else if `0`, remove dialog immediately
