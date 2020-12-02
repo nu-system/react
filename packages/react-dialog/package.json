@@ -20,9 +20,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "focus-trap-react": "^7.0.1"
-  },
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": ">=16.0.0",

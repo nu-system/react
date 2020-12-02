@@ -11,8 +11,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _focusTrapReact = _interopRequireDefault(require("focus-trap-react"));
-
 var _useLockScroll = _interopRequireDefault(require("./useLockScroll"));
 
 var _Portal = _interopRequireDefault(require("../Portal"));
@@ -49,7 +47,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
  * @param lockScroll
  * @param removeTime
  * @param root
- * @param disableEsc
  * @param onClose
  * @param Component
  * @param otherProps
@@ -66,21 +63,15 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
       open = _ref$open === void 0 ? false : _ref$open,
       _ref$lockScroll = _ref.lockScroll,
       lockScroll = _ref$lockScroll === void 0 ? true : _ref$lockScroll,
-      _ref$activeTime = _ref.activeTime,
-      activeTime = _ref$activeTime === void 0 ? 16 : _ref$activeTime,
       _ref$removeTime = _ref.removeTime,
       removeTime = _ref$removeTime === void 0 ? 200 : _ref$removeTime,
       _ref$root = _ref.root,
       root = _ref$root === void 0 ? 'nuModal' : _ref$root,
-      _ref$disableEsc = _ref.disableEsc,
-      disableEsc = _ref$disableEsc === void 0 ? false : _ref$disableEsc,
-      _ref$onClose = _ref.onClose,
-      onClose = _ref$onClose === void 0 ? function () {} : _ref$onClose,
       _ref$Component = _ref.Component,
       Component = _ref$Component === void 0 ? 'dialog' : _ref$Component,
       _ref$forceRender = _ref.forceRender,
       forceRender = _ref$forceRender === void 0 ? false : _ref$forceRender,
-      otherProps = _objectWithoutProperties(_ref, ["className", "children", "open", "lockScroll", "activeTime", "removeTime", "root", "disableEsc", "onClose", "Component", "forceRender"]);
+      otherProps = _objectWithoutProperties(_ref, ["className", "children", "open", "lockScroll", "removeTime", "root", "Component", "forceRender"]);
 
   // is render in dom
   var _useState = (0, _react.useState)(forceRender),
@@ -92,17 +83,10 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
   var _useState3 = (0, _react.useState)(null),
       _useState4 = _slicedToArray(_useState3, 2),
       show = _useState4[0],
-      setShow = _useState4[1]; // is active
-
-
-  var _useState5 = (0, _react.useState)(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      active = _useState6[0],
-      setActive = _useState6[1];
+      setShow = _useState4[1];
 
   (0, _react.useEffect)(function () {
     var removeTimer;
-    var inTimer;
 
     if (open) {
       setExit(true);
@@ -113,16 +97,8 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
 
       setTimeout(function () {
         setShow(true);
-        /**
-         *  After show active focus trap
-         */
-
-        inTimer = setTimeout(function () {
-          setActive(true);
-        }, activeTime > 16 ? activeTime : 16);
       }, 16);
     } else {
-      setActive(false);
       setShow(null); // remove dialog by removeTime
 
       if (removeTime > 0) {
@@ -140,9 +116,8 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
     return function () {
       // eslint-disable-next-line no-unused-expressions
       removeTimer && clearTimeout(removeTimer);
-      inTimer && clearTimeout(inTimer);
     };
-  }, [open, removeTime, forceRender, activeTime]);
+  }, [open, removeTime, forceRender]);
   /**
    * if `true` lock the scroll when open
    */
@@ -158,20 +133,13 @@ var NuModal = _react.default.forwardRef(function NuModal(_ref, ref) {
 
   return /*#__PURE__*/_react.default.createElement(_Portal.default, {
     root: root
-  }, /*#__PURE__*/_react.default.createElement(_focusTrapReact.default, {
-    active: active,
-    focusTrapOptions: {
-      onDeactivate: onClose,
-      escapeDeactivates: !disableEsc,
-      returnFocusOnDeactivate: true
-    }
   }, /*#__PURE__*/_react.default.createElement(Component, _extends({
     ref: ref,
     open: show,
     tabIndex: "0",
     role: "dialog",
     className: className
-  }, otherProps), children)));
+  }, otherProps), children));
 });
 
 NuModal.defaultProps = {};
@@ -187,12 +155,6 @@ NuModal.propTypes = {
   children: _propTypes.default.node,
 
   /**
-   * if `> 16`, the focus trap active after removeTime
-   * else `16`, the focus trap active after 16
-   */
-  activeTime: _propTypes.default.number,
-
-  /**
    * if `> 0`, hide dialog and remove dialog after removeTime
    * else if `0`, remove dialog immediately
    * else, keep exit after hide
@@ -206,11 +168,6 @@ NuModal.propTypes = {
   open: _propTypes.default.bool,
 
   /**
-   * Callback fired when dialog close.
-   */
-  onClose: _propTypes.default.func,
-
-  /**
    * If `true`, when dialog scroll into bottom the body will scroll
    */
   lockScroll: _propTypes.default.bool,
@@ -220,11 +177,6 @@ NuModal.propTypes = {
    * If `false`, modal will not use portal
    */
   root: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.element, _propTypes.default.oneOf([false])]),
-
-  /**
-   * If `true`, the dialog will not close when click esc
-   */
-  disableEsc: _propTypes.default.bool,
 
   /**
    * Components of modal

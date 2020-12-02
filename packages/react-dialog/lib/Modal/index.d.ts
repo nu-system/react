@@ -4,12 +4,9 @@ export interface ComponentProps {
   Component?: React.ReactNode;
   children?: React.ReactNode;
   className?: String;
-  onClose?: () => {};
-  activeTime?: number;
   removeTime?: number;
   open?: boolean;
   lockScroll?: boolean;
-  disableEsc?: boolean;
   forceRender?: boolean;
   root?: string | false | HTMLElement;
 }
