@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.4...@_nu/react-dialog@1.2.5) (2020-12-02)
+
+### Bug Fixes
+
+- 去掉 dialog 的 focus-trap ([87ca8a3](https://github.com/nu-system/react/commit/87ca8a3d9327dffa6a134b11d2e56580bc125331))
+
 ## [1.2.4](https://github.com/nu-system/react/compare/@_nu/react-dialog@1.2.3...@_nu/react-dialog@1.2.4) (2020-11-10)
 
 ### Bug Fixes
