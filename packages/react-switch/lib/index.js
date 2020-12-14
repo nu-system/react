@@ -28,6 +28,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
  * @returns {*|null|React.DetailedReactHTMLElement<*, HTMLElement>}
  * @constructor
  */
+// eslint-disable-next-line react/prop-types
 var RenderIcon = function RenderIcon(_ref) {
   var Icon = _ref.Icon,
       props = _objectWithoutProperties(_ref, ["Icon"]);
@@ -58,14 +59,16 @@ var NuSwitch = _react.default.forwardRef(function NuSwitch(_ref2, ref) {
       Icon = _ref2.Icon,
       type = _ref2.type,
       children = _ref2.children,
-      className = _ref2.className,
+      _ref2$className = _ref2.className,
+      className = _ref2$className === void 0 ? '' : _ref2$className,
       classNameInput = _ref2.classNameInput,
       defaultClass = _ref2.defaultClass,
-      otherProps = _objectWithoutProperties(_ref2, ["Component", "Icon", "type", "children", "className", "classNameInput", "defaultClass"]);
+      componentProps = _ref2.componentProps,
+      otherProps = _objectWithoutProperties(_ref2, ["Component", "Icon", "type", "children", "className", "classNameInput", "defaultClass", "componentProps"]);
 
-  return /*#__PURE__*/_react.default.createElement(Component, {
+  return /*#__PURE__*/_react.default.createElement(Component, _extends({
     className: (0, _classnames.default)(defaultClass.component, className)
-  }, /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, componentProps), /*#__PURE__*/_react.default.createElement("input", _extends({
     className: (0, _classnames.default)(defaultClass.input, classNameInput),
     ref: ref,
     type: type
@@ -87,8 +90,8 @@ NuSwitch.defaultProps = {
   }),
   type: 'checkbox',
   children: null,
-  className: '',
-  classNameInput: ''
+  classNameInput: '',
+  componentProps: {}
 };
 NuSwitch.propTypes = {
   /** 默认class */
@@ -108,6 +111,9 @@ NuSwitch.propTypes = {
 
   /** 容器组件，默认为 label */
   Component: _propTypes.default.node,
+
+  /** 容器组件的 props */
+  componentProps: _propTypes.default.object,
 
   /** 图标 */
   Icon: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.func])

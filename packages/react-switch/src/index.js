@@ -14,6 +14,7 @@ import PropTypes from 'prop-types';
  * @returns {*|null|React.DetailedReactHTMLElement<*, HTMLElement>}
  * @constructor
  */
+// eslint-disable-next-line react/prop-types
 const RenderIcon = ({ Icon, ...props }) => {
   if (!Icon) {
     return null;
@@ -44,15 +45,20 @@ const NuSwitch = React.forwardRef(function NuSwitch(
     Icon,
     type,
     children,
-    className,
+    // eslint-disable-next-line react/prop-types
+    className = '',
     classNameInput,
     defaultClass,
+    componentProps,
     ...otherProps
   },
   ref,
 ) {
   return (
-    <Component className={classNames(defaultClass.component, className)}>
+    <Component
+      className={classNames(defaultClass.component, className)}
+      {...componentProps}
+    >
       <input
         className={classNames(defaultClass.input, classNameInput)}
         ref={ref}
@@ -78,8 +84,8 @@ NuSwitch.defaultProps = {
   Icon: <i className="_icon" />,
   type: 'checkbox',
   children: null,
-  className: '',
   classNameInput: '',
+  componentProps: {},
 };
 
 NuSwitch.propTypes = {
@@ -96,6 +102,8 @@ NuSwitch.propTypes = {
   children: PropTypes.node,
   /** 容器组件，默认为 label */
   Component: PropTypes.node,
+  /** 容器组件的 props */
+  componentProps: PropTypes.object,
   /** 图标 */
   Icon: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };

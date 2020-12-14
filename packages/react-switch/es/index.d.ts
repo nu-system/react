@@ -12,6 +12,7 @@ export interface ComponentProps extends React.HTMLAttributes<HTMLElement> {
   defaultClass?: defaultClassT;
   classNameInput?: string;
   type?: 'checkbox' | 'radio';
+  componentProps?: {};
 }
 declare const _default: (props?: ComponentProps) => JSX.Element;
 export default _default;
