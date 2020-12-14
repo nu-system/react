@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/nu-system/react/compare/@_nu/react-switch@0.1.6...@_nu/react-switch@0.1.7) (2020-12-14)
+
+### Bug Fixes
+
+- switch 添加 componentsProps ([66582e8](https://github.com/nu-system/react/commit/66582e8db328d267c7dfed14239f4f9378b9277f))
+
 ## [0.1.6](https://github.com/nu-system/react/compare/@_nu/react-switch@0.1.5...@_nu/react-switch@0.1.6) (2020-08-18)
 
 ### Bug Fixes
