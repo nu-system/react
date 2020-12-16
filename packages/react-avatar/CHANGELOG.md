@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.4.0...@_nu/react-avatar@0.4.1) (2020-12-16)
+
+### Bug Fixes
+
+- build avatar ([8465e65](https://github.com/nu-system/react/commit/8465e653c4173ddc19b05d0dc3c6ecea2053983e))
+
 # [0.4.0](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.3.3...@_nu/react-avatar@0.4.0) (2020-12-16)
 
 ### Features
