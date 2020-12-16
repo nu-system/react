@@ -17,12 +17,12 @@ const AvatarDefault = ({ className = null }) => (
 function Demo() {
   return (
     <div>
-      <Avatar src={imgAvatar} alt="hello" size={24} />
-      <Avatar src={imgAvatar} alt="hello" size={40} />
-      <Avatar src={imgAvatar} alt="hello" size={32} />
-      <Avatar src="123" alt="hello" size="auto" placeholder={AvatarDefault} />
-      <Avatar src={imgAvatar} size="auto" alt="hello" />
-      <Avatar placeholder={AvatarDefault} size="auto" alt="hello" />
+      <Avatar alt="hello" size={24} src={imgAvatar} />
+      <Avatar alt="hello" size={32} src={imgAvatar} />
+      <Avatar alt="hello" size={40} src={imgAvatar} />
+      <Avatar alt="hello" size={40} src="123" placeholder={AvatarDefault} />
+      <Avatar alt="hello" src={imgAvatar} />
+      <Avatar alt="hello" placeholder={AvatarDefault} />
     </div>
   );
 }

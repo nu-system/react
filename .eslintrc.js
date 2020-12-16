@@ -23,5 +23,7 @@ module.exports = {
     'no-unused-expressions': [0],
     'react/forbid-prop-types': [0],
     'prefer-arrow-callback': [0],
+    // 是否需要校验className
+    'react/prop-types': [0],
   },
 };

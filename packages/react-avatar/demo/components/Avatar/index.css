@@ -1,34 +1,12 @@
-.avatar {
-  display: inline-block;
-  vertical-align: middle;
-  background-color: #dddddd;
-  position: relative;
-  border-radius: 100%;
-  overflow: hidden;
-}
-.img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ph {
-  display: block;
-  padding-top: 100%;
-}
-.avatar._auto {
-  display: block;
-}
-.avatar._24 {
+[size='24'] {
   width: 24px;
 }
-.avatar._32 {
+[size='32'] {
   width: 32px;
 }
-.avatar._40 {
+[size='40'] {
   width: 40px;
 }
-.avatar._48 {
+[size='48'] {
   width: 48px;
 }

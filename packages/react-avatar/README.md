@@ -22,10 +22,26 @@ $ npm install @_nu/react-avatar
 
 ```JSX
 /* @/components/Avatar/index.js */
-import Avatar from "@_nu/react-avatar";
+import React from 'react';
+import { Container, Img, Skeleton } from '@_nu/react-avatar';
+import '@_nu/css-acss';
+import './index.css';
 
-// 这里编写自定义的样式
-import './style.css';
+const Avatar = ({
+  className = '',
+  src,
+  size,
+  placeholder,
+  children = null,
+}) => {
+  return (
+    <Container size={size} className={className}>
+      <Skeleton />
+      <Img src={src} size={size} placeholder={placeholder} />
+      {children}
+    </Container>
+  );
+};
 
 export default Avatar;
 ```
@@ -50,13 +66,13 @@ const AvatarDefault = ({ className = null }) => (
 const Page=()=>{
     return (
      <div>
-      <Avatar src={imgAvatar} alt="hello" size={24} />
-      <Avatar src={imgAvatar} alt="hello" size={40} />
-      <Avatar src={imgAvatar} alt="hello" size={32} />
-      <Avatar src={imgAvatar} alt="hello" size="auto"  />
-      <Avatar placeholder={AvatarDefault} src="123" alt="hello" size="auto"   />
-      <Avatar placeholder={AvatarDefault} size="auto" alt="hello" />
-     </div>
+      <Avatar alt="hello" size={24} src={imgAvatar} />
+      <Avatar alt="hello" size={32} src={imgAvatar} />
+      <Avatar alt="hello" size={40} src={imgAvatar} />
+      <Avatar alt="hello" size={40} src="123" placeholder={AvatarDefault} />
+      <Avatar alt="hello" src={imgAvatar} />
+      <Avatar alt="hello" placeholder={AvatarDefault} />
+    </div>
     );
 };
 

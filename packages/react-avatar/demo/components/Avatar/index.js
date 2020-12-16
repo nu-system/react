@@ -1,12 +1,22 @@
 import React from 'react';
-import NuAvatar from '../../../src/index';
+import { NuContainer, NuImg, NuSkeleton } from '../../../src/index';
 import '@_nu/css-acss';
 import './index.css';
 
-NuAvatar.defaultProps.defaultClassNames = {
-  component: 'avatar',
-  ph: 'ph',
-  img: 'img',
+const Avatar = ({
+  className = '',
+  src,
+  size,
+  placeholder,
+  children = null,
+}) => {
+  return (
+    <NuContainer size={size} className={className}>
+      <NuSkeleton />
+      <NuImg src={src} size={size} placeholder={placeholder} />
+      {children}
+    </NuContainer>
+  );
 };
 
-export default NuAvatar;
+export default Avatar;
