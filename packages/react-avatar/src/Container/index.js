@@ -2,7 +2,7 @@ import React from 'react';
 
 const Container = ({
   Component = 'i',
-  acss = 'db pr oh',
+  acss = 'db pr',
   acssWhenSize = 'dib vam pr',
   className = '',
   size,

@@ -19,7 +19,7 @@ var Container = function Container(_ref) {
   var _ref$Component = _ref.Component,
       Component = _ref$Component === void 0 ? 'i' : _ref$Component,
       _ref$acss = _ref.acss,
-      acss = _ref$acss === void 0 ? 'db pr oh' : _ref$acss,
+      acss = _ref$acss === void 0 ? 'db pr' : _ref$acss,
       _ref$acssWhenSize = _ref.acssWhenSize,
       acssWhenSize = _ref$acssWhenSize === void 0 ? 'dib vam pr' : _ref$acssWhenSize,
       _ref$className = _ref.className,
