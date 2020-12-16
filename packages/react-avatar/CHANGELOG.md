@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.3.3...@_nu/react-avatar@0.4.0) (2020-12-16)
+
+### Features
+
+- avatar 修改为 atom 形势 ([da6bbed](https://github.com/nu-system/react/commit/da6bbed36115f61392661d73050b282920589d7f))
+
 ## [0.3.3](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.3.2...@_nu/react-avatar@0.3.3) (2020-08-18)
 
 ### Bug Fixes
