@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.4.1...@_nu/react-avatar@0.4.2) (2020-12-16)
+
+### Bug Fixes
+
+- 修改默认圆角 ([2299d54](https://github.com/nu-system/react/commit/2299d54f175cd78380922557a501be9b21a9e53a))
+
 ## [0.4.1](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.4.0...@_nu/react-avatar@0.4.1) (2020-12-16)
 
 ### Bug Fixes
