@@ -123,7 +123,7 @@ var Img = function Img(_ref) {
     _ref$src = _ref.src,
     src = _ref$src === void 0 ? '' : _ref$src,
     _ref$acss = _ref.acss,
-    acss = _ref$acss === void 0 ? 'pa t0 l0 w100p h100p' : _ref$acss,
+    acss = _ref$acss === void 0 ? 'pa t0 l0 w100p h100p br100p' : _ref$acss,
     otherProps = _objectWithoutProperties(_ref, [
       'className',
       'placeholder',

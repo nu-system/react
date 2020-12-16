@@ -7,7 +7,7 @@ const Img = ({
   onError,
   size,
   src = '',
-  acss = 'pa t0 l0 w100p h100p',
+  acss = 'pa t0 l0 w100p h100p br100p',
   ...otherProps
 }) => {
   const [imgLoadError, setImgLoadError] = useState(false);

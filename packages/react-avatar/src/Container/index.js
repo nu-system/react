@@ -2,8 +2,8 @@ import React from 'react';
 
 const Container = ({
   Component = 'i',
-  acss = 'db pr oh br100p',
-  acssWhenSize = 'dib vam pr oh br100p',
+  acss = 'db pr oh',
+  acssWhenSize = 'dib vam pr',
   className = '',
   size,
   ...otherProps
