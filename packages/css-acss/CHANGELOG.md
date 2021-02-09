@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/nu-system/react/compare/@_nu/css-acss@0.4.0...@_nu/css-acss@0.5.0) (2021-02-09)
+
+### Features
+
+- 升级 acss ([92c0373](https://github.com/nu-system/react/commit/92c0373db8d90abec5924c4d1335f60c655f8edd))
+
 # [0.4.0](https://github.com/nu-system/react/compare/@_nu/css-acss@0.3.11...@_nu/css-acss@0.4.0) (2020-11-03)
 
 ### Features
