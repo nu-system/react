@@ -7,8 +7,8 @@
 [npm-badge]: https://img.shields.io/npm/v/@_nu/css-input.svg
 [npm-url]: https://www.npmjs.org/package/@_nu/css-input
 [npm-downloads]: https://img.shields.io/npm/dw/@_nu/css-input
-[git-url]: https://github.com/nu-system/css-input
-[git-badge]: https://img.shields.io/github/stars/nu-system/css-input.svg?style=social
+[git-url]: https://github.com/nu-system/react
+[git-badge]: https://img.shields.io/github/stars/nu-system/react.svg?style=social
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@_nu/css-input/badge
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/@_nu/css-input
 

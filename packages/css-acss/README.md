@@ -7,8 +7,8 @@
 [npm-badge]: https://img.shields.io/npm/v/@_nu/css-acss.svg
 [npm-url]: https://www.npmjs.org/package/@_nu/css-acss
 [npm-downloads]: https://img.shields.io/npm/dw/@_nu/css-acss
-[git-url]: https://github.com/nu-system/css-acss
-[git-badge]: https://img.shields.io/github/stars/nu-system/css-acss.svg?style=social
+[git-url]: https://github.com/nu-system/react
+[git-badge]: https://img.shields.io/github/stars/nu-system/react.svg?style=social
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@_nu/css-acss/badge
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/@_nu/css-acss
 

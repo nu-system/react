@@ -8,8 +8,8 @@
 [npm-badge]: https://img.shields.io/npm/v/@_nu/css-textarea.svg
 [npm-url]: https://www.npmjs.org/package/@_nu/css-textarea
 [npm-downloads]: https://img.shields.io/npm/dw/@_nu/css-textarea
-[git-url]: https://github.com/nu-system/css-textarea
-[git-badge]: https://img.shields.io/github/stars/nu-system/css-textarea.svg?style=social
+[git-url]: https://github.com/nu-system/react
+[git-badge]: https://img.shields.io/github/stars/nu-system/react.svg?style=social
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@_nu/css-textarea/badge
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/@_nu/css-textarea
 

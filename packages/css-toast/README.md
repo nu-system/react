@@ -3,7 +3,7 @@
 [![npm package][npm-badge]][npm]
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/@_nu/css-toast
+[npm]: https://www.npmjs.org/package/@_nu/react
 
 <iframe height="400" style="width: 100%;" scrolling="no" title="nu-toast" src="//codepen.io/ziven27/embed/mZyprq/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/ziven27/pen/mZyprq/'>nu-toast</a> by ziven27
@@ -46,10 +46,10 @@ yarn add @_nu/css-toast
 
 ## Api
 
-| 选择器   |   功能   |
-|:----------|-------------:|
-| `.nu_toast._open` |  是否显示toast |
-| `.nu_dialog._[skins]` | toast 的皮肤 |
+| 选择器                |           功能 |
+| :-------------------- | -------------: |
+| `.nu_toast._open`     | 是否显示 toast |
+| `.nu_dialog._[skins]` |   toast 的皮肤 |
 
 这边约定用 `_open` 来控制 toast 的显示隐藏。
 
@@ -62,7 +62,7 @@ yarn add @_nu/css-toast
 ## 如何添加动效?
 
 ```css
-.nu_toast{
+.nu_toast {
   visibility: hidden;
   opacity: 0;
   transform: translate(0, -10px);
@@ -80,8 +80,8 @@ yarn add @_nu/css-toast
 
 ```css
 .nu_toast {
-  border-radius: .25rem;
-  padding: .75rem 1.25rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
   color: #004085;
   background-color: #cce5ff;
   border: 1px solid #b8daff;

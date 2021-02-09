@@ -7,8 +7,8 @@
 [npm-badge]: https://img.shields.io/npm/v/@_nu/css-dialog.svg
 [npm-url]: https://www.npmjs.org/package/@_nu/css-dialog
 [npm-downloads]: https://img.shields.io/npm/dw/@_nu/css-dialog
-[git-url]: https://github.com/nu-system/css
-[git-badge]: https://img.shields.io/github/stars/nu-system/css.svg?style=social
+[git-url]: https://github.com/nu-system/react
+[git-badge]: https://img.shields.io/github/stars/nu-system/react.svg?style=social
 
 css vanilla dialog component.
 
@@ -71,7 +71,6 @@ nu-dialog 这边只是约定了 几个 CSS Hooks 的方案，所以对于使用�
 ## 如何添加动效?
 
 ```css
-
 .nu_dialog {
   transform: translate(0, 50px);
 }
