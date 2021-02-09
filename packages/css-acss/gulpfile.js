@@ -4,9 +4,9 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 
-const core = function () {
-  return src('./src/index.scss')
-    .pipe(sass())
+const core = function() {
+  return src('./src/index.less')
+    .pipe(less())
     .pipe(autoprefixer())
     .pipe(
       cleanCSS({
@@ -16,7 +16,7 @@ const core = function () {
     .pipe(dest('./lib/'));
 };
 
-const demoLess = function () {
+const demoLess = function() {
   return src('./demo/less.less')
     .pipe(less())
     .pipe(autoprefixer())
@@ -28,7 +28,7 @@ const demoLess = function () {
     .pipe(dest('./demo/'));
 };
 
-const demoScss = function () {
+const demoScss = function() {
   return src('./demo/scss.scss')
     .pipe(sass())
     .pipe(autoprefixer())
@@ -40,7 +40,7 @@ const demoScss = function () {
     .pipe(dest('./demo/'));
 };
 
-const watchFile = function () {
+const watchFile = function() {
   // less/demo.less 有引用 css/core.css 文件，所以需要监听
   watch('./lib/_minxin.less', demoLess);
   watch('./lib/_mixin.scss', demoScss);
