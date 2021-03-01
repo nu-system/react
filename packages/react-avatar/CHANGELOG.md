@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.4.4...@_nu/react-avatar@0.5.0) (2021-03-01)
+
+
+### Features
+
+* **react-avatar:** 升级 sacss ([847aae4](https://github.com/nu-system/react/commit/847aae43d02c7c4ecd1deb40946e2a6cf17ec68a))
+
+
+
+
+
 ## [0.4.4](https://github.com/nu-system/react/compare/@_nu/react-avatar@0.4.3...@_nu/react-avatar@0.4.4) (2021-02-09)
 
 **Note:** Version bump only for package @\_nu/react-avatar
