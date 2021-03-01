@@ -6,7 +6,6 @@
   },
   "scripts": {
     "cz": "git add . && git-cz",
-    "sc:acss": "yarn workspace @_nu/css-acss start",
     "sc:button": "yarn workspace @_nu/css-button start",
     "sc:dialog": "yarn workspace @_nu/css-dialog start",
     "sc:input": "yarn workspace @_nu/css-input start",

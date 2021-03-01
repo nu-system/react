@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skeleton = ({
   Component = 'span',
-  acss = 'db pt100p',
+  acss = 'db pt100%',
   className = '',
   ...otherProps
 }) => (

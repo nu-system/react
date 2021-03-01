@@ -24,7 +24,7 @@ $ npm install @_nu/react-avatar
 /* @/components/Avatar/index.js */
 import React from 'react';
 import { Container, Img, Skeleton } from '@_nu/react-avatar';
-import '@_nu/css-acss';
+import 'sacss';
 import './index.css';
 
 const Avatar = ({

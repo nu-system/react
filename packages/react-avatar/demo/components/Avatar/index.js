@@ -1,6 +1,6 @@
 import React from 'react';
 import { NuContainer, NuImg, NuSkeleton } from '../../../src/index';
-import '@_nu/css-acss';
+import 'sacss';
 import './index.css';
 
 const Avatar = ({

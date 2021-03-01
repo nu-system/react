@@ -19,7 +19,7 @@ var Skeleton = function Skeleton(_ref) {
   var _ref$Component = _ref.Component,
       Component = _ref$Component === void 0 ? 'span' : _ref$Component,
       _ref$acss = _ref.acss,
-      acss = _ref$acss === void 0 ? 'db pt100p' : _ref$acss,
+      acss = _ref$acss === void 0 ? 'db pt100%' : _ref$acss,
       _ref$className = _ref.className,
       className = _ref$className === void 0 ? '' : _ref$className,
       otherProps = _objectWithoutProperties(_ref, ["Component", "acss", "className"]);
