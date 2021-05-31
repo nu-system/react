@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/nu-system/react/compare/@_nu/react-select@0.1.6...@_nu/react-select@0.1.7) (2021-05-31)
+
+### Bug Fixes
+
+- 修改依赖 ([fea33a8](https://github.com/nu-system/react/commit/fea33a894f078948acbab0fe80819eb555f68325))
+
 ## [0.1.6](https://github.com/nu-system/react/compare/@_nu/react-select@0.1.5...@_nu/react-select@0.1.6) (2020-08-18)
 
 ### Bug Fixes

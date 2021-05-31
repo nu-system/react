@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/nu-system/react/compare/@_nu/react-switch@0.1.7...@_nu/react-switch@0.1.8) (2021-05-31)
+
+### Bug Fixes
+
+- 修改依赖 ([fea33a8](https://github.com/nu-system/react/commit/fea33a894f078948acbab0fe80819eb555f68325))
+
 ## [0.1.7](https://github.com/nu-system/react/compare/@_nu/react-switch@0.1.6...@_nu/react-switch@0.1.7) (2020-12-14)
 
 ### Bug Fixes
