@@ -11,6 +11,9 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _excluded = ["Icon"],
+    _excluded2 = ["Component", "Icon", "type", "children", "className", "classNameInput", "defaultClass", "componentProps"];
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -31,13 +34,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 // eslint-disable-next-line react/prop-types
 var RenderIcon = function RenderIcon(_ref) {
   var Icon = _ref.Icon,
-      props = _objectWithoutProperties(_ref, ["Icon"]);
+      props = _objectWithoutProperties(_ref, _excluded);
 
   if (!Icon) {
     return null;
   }
 
-  return _typeof(Icon) === 'object' ? _react.default.cloneElement(Icon, props) : /*#__PURE__*/_react.default.createElement(Icon, props);
+  return _typeof(Icon) === 'object' ? /*#__PURE__*/_react.default.cloneElement(Icon, props) : /*#__PURE__*/_react.default.createElement(Icon, props);
 };
 /**
  * On Off
@@ -54,7 +57,7 @@ var RenderIcon = function RenderIcon(_ref) {
  */
 
 
-var NuSwitch = _react.default.forwardRef(function NuSwitch(_ref2, ref) {
+var NuSwitch = /*#__PURE__*/_react.default.forwardRef(function NuSwitch(_ref2, ref) {
   var Component = _ref2.Component,
       Icon = _ref2.Icon,
       type = _ref2.type,
@@ -64,7 +67,7 @@ var NuSwitch = _react.default.forwardRef(function NuSwitch(_ref2, ref) {
       classNameInput = _ref2.classNameInput,
       defaultClass = _ref2.defaultClass,
       componentProps = _ref2.componentProps,
-      otherProps = _objectWithoutProperties(_ref2, ["Component", "Icon", "type", "children", "className", "classNameInput", "defaultClass", "componentProps"]);
+      otherProps = _objectWithoutProperties(_ref2, _excluded2);
 
   return /*#__PURE__*/_react.default.createElement(Component, _extends({
     className: (0, _classnames.default)(defaultClass.component, className)

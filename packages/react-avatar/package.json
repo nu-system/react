@@ -9,9 +9,6 @@
   "license": "MIT",
   "homepage": "https://github.com/nu-system/react",
   "bugs": "https://github.com/nu-system/react/issues",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": "git@github.com:nu-system/react.git",
   "files": [
     "es",
@@ -20,6 +17,9 @@
     "lang",
     "demo"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
@@ -45,5 +45,26 @@
     "react-ui",
     "avatar"
   ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx}": [
+      "node_modules/.bin/prettier --write",
+      "node_modules/.bin/eslint --fix",
+      "git add ."
+    ],
+    "*.{css,scss,less,json,html,md,markdown}": [
+      "node_modules/.bin/prettier --write",
+      "git add ."
+    ]
+  },
   "gitHead": "6a4ea98e33a28bc87263e316d1d00f92d5744452"
 }

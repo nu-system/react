@@ -11,6 +11,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 require("./style.css");
 
+var _excluded = ["className", "errorBg", "circle"],
+    _excluded2 = ["responsive", "children"],
+    _excluded3 = ["style", "circle", "className"];
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -55,7 +59,7 @@ var Img = function Img(_ref) {
       errorBg = _ref$errorBg === void 0 ? false : _ref$errorBg,
       _ref$circle = _ref.circle,
       circle = _ref$circle === void 0 ? false : _ref$circle,
-      otherProps = _objectWithoutProperties(_ref, ["className", "errorBg", "circle"]);
+      otherProps = _objectWithoutProperties(_ref, _excluded);
 
   if (errorBg && !otherProps.onError) {
     otherProps.onError = function (event) {
@@ -77,7 +81,7 @@ var NuImg = function NuImg(_ref2) {
       responsive = _ref2$responsive === void 0 ? false : _ref2$responsive,
       _ref2$children = _ref2.children,
       children = _ref2$children === void 0 ? null : _ref2$children,
-      otherProps = _objectWithoutProperties(_ref2, ["responsive", "children"]);
+      otherProps = _objectWithoutProperties(_ref2, _excluded2);
 
   if (!responsive && !children) {
     return /*#__PURE__*/_react.default.createElement(Img, otherProps);
@@ -87,14 +91,13 @@ var NuImg = function NuImg(_ref2) {
       circle = otherProps.circle,
       _otherProps$className = otherProps.className,
       className = _otherProps$className === void 0 ? '' : _otherProps$className,
-      leftProps = _objectWithoutProperties(otherProps, ["style", "circle", "className"]);
+      leftProps = _objectWithoutProperties(otherProps, _excluded3);
 
-  return /*#__PURE__*/_react.default.createElement("nu-img", _extends({
+  return /*#__PURE__*/_react.default.createElement("nu-img", {
     "data-responsive": responsive,
-    class: classNames([className, STYLES.box, circle ? STYLES.circle : ''])
-  }, {
+    class: classNames([className, STYLES.box, circle ? STYLES.circle : '']),
     style: style
-  }), /*#__PURE__*/_react.default.createElement(Img, leftProps), /*#__PURE__*/_react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement(Img, leftProps), /*#__PURE__*/_react.default.createElement("span", {
     className: STYLES.placeholder,
     "aria-hidden": "true",
     style: {

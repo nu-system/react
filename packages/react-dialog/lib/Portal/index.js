@@ -24,7 +24,7 @@ function NuPortal(_ref) {
   }
 
   var container = (0, _getElementById.default)(root) || document.body;
-  return _reactDom.default.createPortal(children, container);
+  return /*#__PURE__*/_reactDom.default.createPortal(children, container);
 }
 
 NuPortal.propTypes = {

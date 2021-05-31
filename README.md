@@ -16,13 +16,15 @@
 $ lerna list  // 查看组件列表
 $ yarn workspace @_nu/react-button nwb serve-react-demo  // 跑 demo
 $ yarn workspace @_nu/react-button add package           // 为组件添加依赖
-$ yarn workspace @_nu/react-button add package -W        // 默认添加添加依赖
-$ yarn build // 构建
-$ yarn cz  // 代码提交
 $ yarn workspace @_nu/react-button jest // 跑测试
+$ yarn add package -W        // 为根目录安装依赖
+$ yarn build:css   // 逐个 运行 CSS packages 中的 build 命名
+$ yarn build:react // 逐个 运行 react packages 中的 build 命名
+$ yarn cz  // 代码提交
 $ yarn br:*  // build-react:Componentname 
 $ yarn bc:*  // build-css:Componentname 
 $ yarn sr:*  // start-react:Componentname 
 $ yarn sc:*  // start-css:Componentname 
+$ lerna run --stream --sort build   #按照拓扑顺序运行所有包 build 命名
 $ lerna publish // 发布代码
 ```
